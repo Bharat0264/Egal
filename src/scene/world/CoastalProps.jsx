@@ -7,13 +7,16 @@ import { getJourneyProgress, roadCurve } from '../Road'
 import { landmarks } from '../../data/landmarks'
 import {coastalRockGeometry,rockBottom} from './rockGeometry'
 import Instances from './Instances'
+import {rockTexture,terrainTextures} from './textures'
+import RoadsideGrowth,{useWind,PalmImpostors} from './Vegetation'
 
-export function crownGeometry() {
+export function crownGeometry(variant=0) {
+  const leaves=variant===1?7:variant===2?11:9,reach=variant===1?.74:variant===2?.5:.6
   const positions = [], indices = []
-  for (let leaf = 0; leaf < 9; leaf++) {
-    const angle = leaf * Math.PI * 2 / 9, base = positions.length / 3
+  for (let leaf = 0; leaf < leaves; leaf++) {
+    const angle = leaf * Math.PI * 2 / leaves, base = positions.length / 3
     for (let j = 0; j <= 5; j++) {
-      const t = j / 5, radius = t * 0.6, y = Math.sin(t * Math.PI) * 0.14 - t * t * 0.16, width = Math.sin(t * Math.PI) * 0.075
+      const t = j / 5, radius = t * reach, y = Math.sin(t * Math.PI) * 0.14 - t * t * 0.16, width = Math.sin(t * Math.PI) * (variant===2?.11:.075)
       for (const side of [-1, 1]) positions.push(Math.cos(angle) * radius + Math.sin(angle) * width * side, y, Math.sin(angle) * radius - Math.cos(angle) * width * side)
       if (j < 5) { const a = base + j * 2; indices.push(a, a + 1, a + 2, a + 1, a + 3, a + 2) }
     }
@@ -40,7 +43,8 @@ function Birds({ low, reducedMotion }) {
 
 export default function CoastalProps({ low, reducedMotion, state }) {
   const bulbs = useRef()
-  const rock=useMemo(()=>coastalRockGeometry(1),[])
+  const rock=useMemo(()=>coastalRockGeometry(low?1:2),[low])
+  const stone=useMemo(rockTexture,[]),stoneDetail=useMemo(terrainTextures,[])
   const data = useMemo(() => {
     const rng = random(), palms = [], crowns = [], shrubs = [], rocks = [], kerbs = [], leftKerbs = [], posts = [], rails = [], poles = [], arms = [], lamps = [], signs = []
     const length = roadCurve.getLength(), count = 210
@@ -59,13 +63,13 @@ export default function CoastalProps({ low, reducedMotion, state }) {
       if (reserved(u, lateral)) continue
       const { p } = frame(u, lateral, landHeight(u, lateral)), h = 4.5 + rng() * 2, yaw = rng() * 6.28, lean = (rng() - 0.5) * 0.12
       const headlineBounds=[p.x-h*.7,p.y,p.z-h*.7,p.x+h*.7,p.y+h*1.2,p.z+h*.7]
-      palms.push({ headlineBounds, position: [p.x, p.y + h / 2, p.z], rotation: [0, yaw, lean], scale: [0.13, h, 0.13] })
-      crowns.push({ headlineBounds, position: [p.x - Math.sin(lean) * h / 2, p.y + h, p.z], rotation: [0, yaw, lean], scale: h })
+      palms.push({ color:['#a28c63','#8b7556','#9b805c'][i%3],headlineBounds, position: [p.x, p.y + h / 2, p.z], rotation: [0, yaw, lean], scale: [0.13, h, 0.13] })
+      crowns.push({ color:['#497b3d','#6b8a47','#3d6e43'][i%3],headlineBounds, position: [p.x - Math.sin(lean) * h / 2, p.y + h, p.z], rotation: [0, yaw, lean], scale: h })
     }
     for (let i = 0; i < 140; i++) {
       const u = rng(), lateral = -4.4 - rng() * 26
       if (reserved(u, lateral)) continue
-      const { p } = frame(u, lateral, landHeight(u, lateral)); shrubs.push({ position: [p.x, p.y + 0.35, p.z], scale: [0.5 + rng(), 0.4 + rng() * 0.4, 0.5 + rng()] })
+      const { p } = frame(u, lateral, landHeight(u, lateral)); shrubs.push({ color:['#678d43','#859251','#52743e'][i%3],position: [p.x, p.y + 0.35, p.z], scale: [0.5 + rng(), 0.4 + rng() * 0.4, 0.5 + rng()] })
     }
     for (let i = 0; i < 88; i++) {
       const u = rng(), lateral = i < 8 ? 15 + rng() * 25 : 7 + rng() * 5
@@ -96,13 +100,16 @@ export default function CoastalProps({ low, reducedMotion, state }) {
     const density=items=>low?items.filter((_,i)=>i%2===0):items
     return { palms:density(palms), crowns:density(crowns), shrubs:density(shrubs), rocks:density(rocks), kerbs, leftKerbs, posts, rails, poles, arms, lamps, signs }
   }, [low,rock])
-  const crown = useMemo(crownGeometry, [])
+  const crown = useMemo(()=>[0,1,2].map(crownGeometry), [])
+  const wind=useWind(low,true),bushWind=useWind(low)
+  const crownSets=useMemo(()=>[0,1,2].map(i=>data.crowns.filter((_,index)=>index%3===i)),[data.crowns])
   useFrame(() => { if (bulbs.current) bulbs.current.emissiveIntensity = 0.2 + state.night * 3 })
-  return <group name={low ? 'coastal-props-low' : 'coastal-props-desktop'}>
-    <Instances headlineSafe name="palm-trunks" items={data.palms}><cylinderGeometry args={[0.65, 1, 1, 7, 3]} /><meshStandardMaterial color="#95735a" roughness={1} /></Instances>
-    <Instances headlineSafe name="palm-fronds" items={data.crowns} geometry={crown}><meshStandardMaterial color="#497a45" roughness={0.85} side={2} /></Instances>
-    <Instances headlineSafe name="shrubs" items={data.shrubs}><icosahedronGeometry args={[1, 1]} /><meshStandardMaterial color="#718c4d" roughness={1} /></Instances>
-    <Instances name="coastal-rocks" items={data.rocks} geometry={rock}><meshStandardMaterial color="#81867d" roughness={0.95} /></Instances>
+  return <group userData={{curveWindow:true}} name={low ? 'coastal-props-low' : 'coastal-props-desktop'}>
+    <Instances headlineSafe far={60} name="palm-trunks" items={data.palms}><cylinderGeometry args={[0.65, 1, 1, 7, 3]} /><meshStandardMaterial color="#ffffff" roughness={1} /></Instances>
+    {crownSets.map((items,i)=><Instances key={i} headlineSafe far={60} name={`palm-fronds-${i}`} items={items} geometry={crown[i]}><meshStandardMaterial onBeforeCompile={wind} color="#ffffff" roughness={.9} side={2}/></Instances>)}
+    <PalmImpostors crowns={data.crowns} low={low}/><RoadsideGrowth low={low}/>
+    <Instances headlineSafe name="shrubs" items={data.shrubs}><sphereGeometry args={[1,8,5]} /><meshStandardMaterial onBeforeCompile={bushWind} color="#ffffff" roughness={1} /></Instances>
+    <Instances name="coastal-rocks" items={data.rocks} geometry={rock}><meshStandardMaterial map={stone} normalMap={stoneDetail.normalMap} vertexColors color="#ffffff" roughness={.94} /></Instances>
     <Instances name="kerbs" items={data.kerbs}><boxGeometry /><meshStandardMaterial color="#d4cab3" roughness={1} /></Instances>
     <Instances name="left-kerbs" items={data.leftKerbs}><boxGeometry /><meshStandardMaterial color="#b5ae9b" roughness={1} /></Instances>
     <Instances name="guard-posts" items={data.posts}><boxGeometry /><meshStandardMaterial color="#9ba7a4" metalness={0.35} roughness={0.6} /></Instances>

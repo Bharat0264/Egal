@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { CatmullRomCurve3, DoubleSide, Float32BufferAttribute, MathUtils, Vector3 } from 'three'
 import { createRibbon, roadCurve, ROAD_WIDTH } from '../Road'
 import { servicesFrame, servicesAnchorU } from './layout'
@@ -6,8 +6,10 @@ import { asphaltTextures } from '../world/textures'
 import Instances from '../world/Instances'
 
 const WIDTH = 4.2
+const spurCache=new Map()
 function local(point) { return point.sub(servicesFrame.p).applyAxisAngle(new Vector3(0,1,0),-servicesFrame.yaw) }
 function buildSpurs(compact) {
+  if(spurCache.has(compact))return spurCache.get(compact)
   const mainLength = roadCurve.getLength(), anchor = servicesAnchorU
   const main = Array.from({length:401},(_,i)=>local(roadCurve.getPointAt(i/400)))
   const distanceToMain = p => Math.sqrt(main.reduce((distance,point)=>Math.min(distance,(p.x-point.x)**2+(p.z-point.z)**2),Infinity))
@@ -43,10 +45,11 @@ function buildSpurs(compact) {
     }
     const p=curve.getPointAt(.58),t=curve.getTangentAt(.58);arrows.push({position:[p.x,.085,p.z],rotation:[Math.PI/2,0,-Math.atan2(t.x,t.z)]})
   }
-  return {roads,edges,kerbs,arrows}
+  const result={roads,edges,kerbs,arrows};spurCache.set(compact,result);return result
 }
 export default function SpurRoads({ compact }) {
   const data=useMemo(()=>buildSpurs(compact),[compact]),textures=useMemo(asphaltTextures,[])
+  useEffect(()=>()=>{for(const geometry of data.roads)geometry.dispose();for(const geometry of data.edges)geometry.dispose()},[data])
   const arrow=useMemo(()=>new Float32Array([-.18,-1,0,.18,-1,0,.18,.3,0,-.18,-1,0,.18,.3,0,-.18,.3,0,-.65,.3,0,.65,.3,0,0,1.1,0]),[])
   return <group name="service-spur-roads">
     {data.roads.map((geometry,i)=><mesh key={i} name={`spur-asphalt-${i}`} geometry={geometry}><meshStandardMaterial {...textures} vertexColors transparent depthWrite={false} roughness={.95} /></mesh>)}

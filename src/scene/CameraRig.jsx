@@ -21,6 +21,8 @@ export default function CameraRig({ onScrollReady, started, transition, reducedM
   const { serviceId, journeyMotion } = useSelection()
   const camera = useThree((state) => state.camera)
   const low = useThree(state => state.size.width < 768)
+  const scrollDistance=useRef(1)
+  useLayoutEffect(()=>{const update=()=>{scrollDistance.current=Math.max(1,scroll.el.scrollHeight-scroll.el.clientHeight)};update();const observer=new ResizeObserver(update);observer.observe(scroll.el);observer.observe(scroll.fill);return()=>observer.disconnect()},[scroll])
   const vectors = useMemo(() => ({
     point: new Vector3(), tangent: new Vector3(), heading: new Vector3(), right:new Vector3(), look: new Vector3(), position: new Vector3(), smoothLook: new Vector3(), openingPoint:new Vector3(), up:new Vector3(0,1,0),shot:new Float64Array(4),
   }), [])
@@ -56,7 +58,7 @@ export default function CameraRig({ onScrollReady, started, transition, reducedM
 
   // Keep the existing native-scroll synchronisation before drei's damping.
   useFrame(() => {
-    const distance = scroll.el.scrollHeight - scroll.el.clientHeight
+    const distance = scrollDistance.current
     scroll.scroll.current = distance > 0 ? scroll.el.scrollTop / distance : 0
   }, -1)
 

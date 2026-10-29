@@ -1,6 +1,6 @@
 import { Component, Suspense, useEffect, useMemo, useRef, useState } from 'react'
-import { useFrame } from '@react-three/fiber'
-import { Html, RoundedBox, useGLTF, useScroll } from '@react-three/drei'
+import { useFrame,useThree } from '@react-three/fiber'
+import { RoundedBox, useGLTF, useScroll } from '@react-three/drei'
 import { Color, MathUtils } from 'three'
 import { cars, fleetCopy, formatPrice, getHeroCarModel } from '../../data/cars'
 import { brand } from '../../data/brand'
@@ -15,6 +15,7 @@ import { preloadFleetInIdle, useFleetAsset } from './fleetAssets'
 import Instances from '../world/Instances'
 import { crownGeometry } from '../world/CoastalProps'
 import { PARKED_YAW, ROW_X, TABLE_X, TABLE_Z, TABLE_RADIUS, BAY_WIDTH, BAY_LENGTH, rowZ, bayDividers } from './fleetLayout'
+import {priceAtlas} from './priceAtlas'
 
 export class FleetBoundary extends Component {
   state = { failed: false }
@@ -30,10 +31,11 @@ function PaintedParts({ source, color, onRoof, type, url, status }) {
     onRoof(roof)
   }, [source, onRoof])
   const target = useMemo(() => new Color(), [])
+  useEffect(()=>{target.set(color)},[target,color])
   useEffect(() => () => parts.forEach(p => p.material.dispose()), [parts])
   useFrame((_, delta) => {
-    target.set(color)
-    parts.forEach(part => { if (part.name === 'BodyPaint') part.material.color.lerp(target, 1 - Math.exp(-delta * 8)) })
+    const alpha=1-Math.exp(-delta*8)
+    for(const part of parts)if(part.name==='BodyPaint')part.material.color.lerp(target,alpha)
   })
   return <group name={`parked-model-${type}`} userData={{modelUrl:url,modelStatus:status}}>{parts.map((part,index) => <mesh key={part.key || `${part.name}-${index}`} name={`${type}-${part.name}`} geometry={part.geometry} material={part.material} dispose={null} />)}</group>
 }
@@ -61,16 +63,19 @@ function SimpleParkedCar({ color }) {
 }
 
 function FleetCar({ car, index }) {
+  const compact=useThree(s=>s.size.width<768)
   const reducedMotion=useReducedMotion()
-  const root = useRef(), spin = useRef(), tag = useRef(), dragPad = useRef(), drag = useRef({ x: 0, time: 0, moved: false })
+  const root = useRef(), spin = useRef(), tag = useRef(), drag = useRef({ x: 0, time: 0, moved: false })
+  const tags=useMemo(priceAtlas,[])
   const [roof, setRoof] = useState(1.6)
   const scroll = useScroll()
-  const { fleetIndex, colors, selectCar, interaction, htmlPortal } = useSelection()
+  const { colors, selectCar, interaction, selectionRef } = useSelection()
   const asset=useFleetAsset(car.id)
   const displayScale=asset?.parts ? car.scale : fleetModels[car.id].fallbackScale
-  const selected = index === fleetIndex, z = rowZ[index]
+  const z = rowZ[index]
   useFrame((_, delta) => {
     const dt = Math.min(delta, .1), motion = interaction.current
+    const selected=index===selectionRef.current.index
     root.current.position.x = MathUtils.damp(root.current.position.x, selected ? TABLE_X : ROW_X, 4, dt)
     root.current.position.z = MathUtils.damp(root.current.position.z, selected ? TABLE_Z : z, 4, dt)
     root.current.position.y = MathUtils.damp(root.current.position.y, selected ? .09 : .015, 4, dt)
@@ -80,31 +85,27 @@ function FleetCar({ car, index }) {
       spin.current.rotation.y = -Math.PI / 2 + .45 + motion.yaw
     } else spin.current.rotation.y = MathUtils.damp(spin.current.rotation.y, PARKED_YAW, 4, dt)
     const fade = textOpacity(scroll.offset,'fleet'), active = fade>0
-    if(tag.current){tag.current.style.display = active && !selected ? 'block' : 'none';tag.current.style.opacity=fade*.8}
-    if(dragPad.current){
-      dragPad.current.style.display = active && selected ? 'block' : 'none'
-      dragPad.current.setAttribute('aria-valuenow',Math.round(((motion.yaw*180/Math.PI+180)%360+360)%360-180))
-    }
+    if(tag.current){tag.current.visible=active&&!selected;tag.current.material.opacity=fade*.8}
   })
   const begin = event => {
-    event.stopPropagation(); event.currentTarget.setPointerCapture(event.pointerId)
+    if(index!==selectionRef.current.index||textOpacity(scroll.offset,'fleet')<=0)return
+    event.stopPropagation(); event.target.setPointerCapture(event.pointerId)
     drag.current = { x: event.clientX, time: performance.now(), moved: false }
     interaction.current.dragging = true; interaction.current.velocity = 0; interaction.current.lastInput = performance.now()
   }
   const move = event => {
-    if (!interaction.current.dragging) return
+    if (index!==selectionRef.current.index||!interaction.current.dragging) return
     const now = performance.now(), dx = event.clientX - drag.current.x
     interaction.current.yaw += dx * .012; interaction.current.velocity = MathUtils.clamp(dx * .012 / Math.max((now - drag.current.time) / 1000, .016), -2, 2)
     interaction.current.lastInput = now; drag.current = { x: event.clientX, time: now, moved: true }
   }
   const end = () => { interaction.current.dragging = false; interaction.current.lastInput = performance.now() }
-  return <group ref={root} name={`fleet-car-${car.id}`} position={[ROW_X, .08, z]} scale={displayScale} onClick={e => { if(textOpacity(scroll.offset,'fleet')<=0)return; e.stopPropagation(); if (!selected) selectCar(index) }}>
+  return <group ref={root} name={`fleet-car-${car.id}`} position={[ROW_X, .08, z]} scale={displayScale} onPointerDown={begin} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end} onClick={e => { if(textOpacity(scroll.offset,'fleet')<=0)return; e.stopPropagation(); if (index!==selectionRef.current.index) selectCar(index) }}>
     <group ref={spin} rotation={[0,PARKED_YAW,0]}>
       <FleetBoundary fallback={<SimpleParkedCar color={colors[index]} />}><Suspense fallback={<SimpleParkedCar color={colors[index]} />}><ParkedModel variant type={car.id} color={colors[index]} onRoof={setRoof} /></Suspense></FleetBoundary>
     </group>
     <mesh rotation={[-Math.PI/2,0,0]} position={[0,.015,0]}><planeGeometry args={[2.7,4.8]} /><meshBasicMaterial color="#29343c" transparent opacity={.12} depthWrite={false} /></mesh>
-    <Html portal={htmlPortal} position={[0,roof+.4/displayScale,0]} center style={{ pointerEvents: 'none' }} zIndexRange={[8,1]}><button ref={tag} className="fleet-price" onClick={() => selectCar(index)}><span>{car.category}</span><strong>{formatPrice(car.price)}/day</strong></button></Html>
-    <Html portal={htmlPortal} position={[0,.9,0]} center style={{ pointerEvents: 'none' }} zIndexRange={[7,1]}><div ref={dragPad} className="car-drag-pad" role="slider" tabIndex={0} aria-label="Rotate selected car" aria-valuemin={-180} aria-valuemax={180} aria-valuenow={0} onPointerDown={begin} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end} onKeyDown={e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); interaction.current.yaw += e.key === 'ArrowLeft' ? -.2 : .2; interaction.current.lastInput = performance.now() } }} title={fleetCopy.hint} /></Html>
+    <sprite ref={tag} name={`fleet-price-${car.id}`} position={[0,roof+.4/displayScale,0]} scale={[(compact?.052:.071)/displayScale,.043/displayScale,1]} onClick={e=>{if(textOpacity(scroll.offset,'fleet')<=0)return;e.stopPropagation();selectCar(index)}}><spriteMaterial map={tags[index]} sizeAttenuation={false} transparent depthWrite={false} toneMapped={false}/></sprite>
   </group>
 }
 

@@ -13,8 +13,12 @@
     "@gltf-transform/core": "^4.5.1",
     "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-react": "^6.1.2",
+    "r3f-perf": "^7.2.3",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.5"
+  },
+  "overrides": {
+    "r3f-perf": { "@react-three/drei": "$@react-three/drei" }
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

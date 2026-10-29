@@ -11,8 +11,8 @@ export default function Loader({onStart,onSkip,onIntent,ready=false,progress=0})
    <span className="eyebrow">A NEW JOURNEY AWAITS</span><div className="opening-logo"><BrandLogo/></div><p className="sr-only">{brand.tagline}</p>
    <div className="loading-track" role="progressbar" aria-label="Loading scene" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(value)}><div style={{width:`${value}%`}}/></div>
    <span className="loading-label" role="status">{Math.round(value)}% · {ready?'Ready when you are':'Preparing your journey'}</span>
-   <button className="primary start" onPointerEnter={onIntent} onFocus={onIntent} onClick={onStart}>START <span aria-hidden="true">↗</span></button>
-   <button className="skip-intro" onClick={onSkip}>Skip introduction <span aria-hidden="true">→</span></button>
+   <button disabled={!ready} className="primary start" onPointerEnter={onIntent} onFocus={onIntent} onClick={onStart}>START <span aria-hidden="true">↗</span></button>
+   <button disabled={!ready} className="skip-intro" onClick={onSkip}>Skip introduction <span aria-hidden="true">→</span></button>
    <a className="simple-view-link" href="/simple" onClick={()=>track('simple_view_click')}>Simple view — no 3D</a>
    <p className="sound-hint">Turn sound on for the best experience</p>
   </div>

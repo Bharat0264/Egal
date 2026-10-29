@@ -1,5 +1,23 @@
 # Egal — scroll-driven car rental scene
 
+## Realism pass (current)
+
+The world now uses foreground-clear exponential/height fog, richer sunrise/sunset lighting, cloud and mountain layers, a slope-blended procedural terrain atlas with wet sand, varied instanced palms/roadside growth, wind and distant palm impostors, smooth moss-tinted rocks, scrolling-normal water, road wear, markers, utility lines, simple traffic and a small dusk-lit town. The hero car, route, landmarks and interactive scenes remain unchanged. No libraries or downloaded assets were added.
+
+Each of the six stages was measured separately. The final production run records about 60 FPS desktop and 34–60 FPS in 4×-CPU phone emulation, with fewer than 150 draws / 400k triangles and under 8 MB observed resources. These are median laboratory results; physical-phone validation and main-thread transition spikes remain limitations. Mobile reduces sea sampling/grid detail, vegetation, town buildings and traffic. The current tables, all ten acceptance screenshots and verification are in [the realism report](assets/realism-pass/REPORT.md). The performance-pass tables below describe the earlier visual baseline.
+
+
+## Current scene performance pass (29 October 2026)
+
+This supersedes the historical loading, shadow and DPR notes below. The world now mounts behind the loader: START waits for the hero, sign glyphs, texture uploads and asynchronous shader warmup for every scene/light configuration. A bounded shared shader/texture catalogue stays resident; far scene components and their exclusive GPU geometries are unmounted/disposed. Initial traffic remains below 8 MB. This trades a longer loader for predictable scene entry.
+
+Run `npm run build`, then `npm run preview -- --port 4173`. Open `http://localhost:4173/?debug=perf` for the query-only r3f-perf diagnostics (FPS, frame time, draws, triangles, textures and geometries). Normal URLs do not fetch this debug chunk. Bare `?debug` enables landmark markers. `npm run dev` remains available for editing.
+
+Every device starts at DPR 1.25; sustained active frame samples target 1.75 above 58 FPS or 1 below 45 FPS. After two seconds without input, scene drawing is capped at 30 FPS; hidden/offscreen canvases stop. Shadows use a shared blob texture; transmission, global shadow maps, backdrop blur and moving HTML price tags are removed. Fleet prices use a single canvas atlas. Scroll selection uses refs and direct HTML updates, with React updates limited to interaction and scene lifecycle boundaries.
+
+Measurements, screenshots, verification and limitations: [current performance report](assets/performance-pass/REPORT.md). The host refresh cadence varied between 30 and 60 FPS on a blank page. The final stable 60 Hz run meets the median laptop and CPU-throttled phone targets; these are laboratory observations, not a physical-device certification. CPU-throttled phone emulation also retains main-thread stalls; zero shader compilation is verified, but universally hitch-free scene entry is not claimed. Physical device profiling remains necessary.
+
+
 ## Current production hardening (Step 8)
 
 The later master-brief follow-up also fixes folded terrain, smooths the graded landscape and grounds shoreline rocks. Blender tire relief is now an exportable in-house 512 px normal map; the car's geometry, rig and design are unchanged. Source and GLB backups plus the inspected render are in `assets/refinement-checks/`.

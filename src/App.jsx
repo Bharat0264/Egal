@@ -1,4 +1,4 @@
-import {lazy,Suspense,useCallback,useRef,useState,Component} from 'react'
+import {lazy,Suspense,useCallback,useEffect,useRef,useState,Component} from 'react'
 import Loader from './ui/Loader'
 import Overlay from './ui/Overlay'
 import SoundToggle from './ui/SoundToggle'
@@ -15,6 +15,7 @@ class SceneBoundary extends Component{
 }
 function Experience(){
  const[started,setStarted]=useState(false),[loadWorld,setLoadWorld]=useState(false),[carReady,setCarReady]=useState(false),[progress,setProgress]=useState(0)
+ useEffect(()=>setLoadWorld(true),[])
  const transition=useRef({started:false,skip:false}),pendingBooking=useRef(false),{scrollRef,bookService}=useSelectionActions()
  const captureScroll=useCallback(scroll=>{scrollRef.current=scroll;if(pendingBooking.current&&canScroll(scroll)){pendingBooking.current=false;bookService()}},[scrollRef,bookService])
  const handleReady=useCallback(()=>{if(!transition.current.started)setCarReady(true)},[]),handleProgress=useCallback(value=>{if(!transition.current.started)setProgress(value)},[])
@@ -22,7 +23,7 @@ function Experience(){
  return <><a className="skip-link" href={started?'#journey-content':'#main-content'}>Skip to content</a><h1 className="sr-only">{brand.name} | {brand.tagline}</h1>
   <SceneBoundary>{loadWorld&&<Suspense fallback={started?<p className="world-loading" role="status">Preparing your journey… <a href="/simple">Simple view</a></p>:null}><World started={started} transition={transition} onScrollReady={captureScroll} onCarReady={handleReady} onProgress={handleProgress}/></Suspense>}</SceneBoundary>
   <Overlay scrollRef={scrollRef} started={started} onBook={bookService}/>{!started&&<Loader ready={carReady} progress={progress} onIntent={()=>setLoadWorld(true)} onStart={()=>start()} onSkip={()=>start(true)}/>}<SoundToggle started={started} scrollRef={scrollRef}/>
-  {!started&&<button className="primary book" onClick={()=>{start(true);if(canScroll(scrollRef.current))bookService();else pendingBooking.current=true}}>Book Now <span aria-hidden="true">↗</span></button>}
+  {!started&&<button disabled={!carReady} className="primary book" onClick={()=>{start(true);if(canScroll(scrollRef.current))bookService();else pendingBooking.current=true}}>Book Now <span aria-hidden="true">↗</span></button>}
  </>
 }
 export default function App(){return <SelectionProvider><Experience/></SelectionProvider>}

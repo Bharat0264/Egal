@@ -5,6 +5,7 @@ import { frame, random } from './layout'
 import { getJourneyProgress } from '../Road'
 import { windowTexture } from './textures'
 import Instances from './Instances'
+import {performanceRuntime} from '../performance/runtime'
 
 export default function City({ low, state }) {
   const group = useRef(), walls = useRef(), trim = useRef()
@@ -12,7 +13,7 @@ export default function City({ low, state }) {
   const purpleFog=useMemo(()=>shader=>{
     shader.uniforms.cityHaze=haze.color;shader.uniforms.cityDusk=haze.amount
     shader.fragmentShader=shader.fragmentShader.replace('#include <fog_pars_fragment>','#include <fog_pars_fragment>\nuniform vec3 cityHaze;uniform float cityDusk;').replace('#include <fog_fragment>',`#ifdef USE_FOG
-      float cityFog=smoothstep(fogNear,fogFar,vFogDepth);
+      float cityFog=1.-exp(-fogDensity*fogDensity*vFogDepth*vFogDepth);
       gl_FragColor.rgb=mix(gl_FragColor.rgb,mix(fogColor,cityHaze,cityDusk),cityFog);
       #endif`)
   },[haze])
@@ -37,13 +38,13 @@ export default function City({ low, state }) {
     return { buildings, spokes, pods, piers, cables }
   }, [low])
   useFrame(() => {
-    const visibility = MathUtils.smoothstep(state.progress, 0.73, 0.82)
+    const visibility = performanceRuntime.warming?1:MathUtils.smoothstep(state.progress, 0.73, 0.82)
     group.current.visible = visibility > 0.001
     haze.amount.value=MathUtils.smoothstep(state.progress,.88,1)
     walls.current.opacity = visibility * 0.88; walls.current.emissiveIntensity = state.night * 1.8
     trim.current.emissiveIntensity = state.night * 1.7
   })
-  return <group ref={group} name="distant-city" position={origin.toArray()}>
+  return <group ref={group} userData={{curveWindow:true}} name="distant-city" position={origin.toArray()}>
     <Instances name="city-buildings" items={data.buildings}><boxGeometry /><meshStandardMaterial ref={walls} onBeforeCompile={purpleFog} map={windows} emissiveMap={windows} emissive="#ffbc68" emissiveIntensity={0} color="#b7c0bd" transparent roughness={0.75} /></Instances>
     <mesh position={[43, 9, 8]}><torusGeometry args={[7, 0.14, 5, 40]} /><meshStandardMaterial ref={trim} color="#d9c2ac" emissive="#ffae57" /></mesh>
     <Instances name="ferris-spokes" items={data.spokes}><boxGeometry /><meshStandardMaterial color="#c9b8a5" /></Instances>

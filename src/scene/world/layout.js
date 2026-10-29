@@ -35,6 +35,7 @@ export function frame(u, lateral = 0, height = 0) {
   p.addScaledVector(right, lateral); p.y = height
   return { p, tangent, right, yaw: Math.atan2(tangent.x, tangent.z) }
 }
+export function writeFrame(u,lateral,height,out){roadCurve.getPointAt(MathUtils.clamp(u,0,1),out.p);roadCurve.getTangentAt(MathUtils.clamp(u,0,1),out.tangent);out.right.set(-out.tangent.z,0,out.tangent.x).normalize();out.p.addScaledVector(out.right,lateral);out.p.y=height;return out}
 export function reserved(u, lateral) {
   const p = roadCurve.getPointAt(u), t = roadCurve.getTangentAt(u)
   p.addScaledVector(new Vector3(-t.z,0,t.x).normalize(),lateral).sub(bayOrigin)

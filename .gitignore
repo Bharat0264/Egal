@@ -39,3 +39,9 @@ dist-ssr
 !/assets/refinement-checks/car-after.png
 !/assets/refinement-checks/tire-normal.png
 !/assets/refinement-checks/scene-*.png
+.perf-baseline/
+.perf-baseline.zip
+
+# Final acceptance images linked from the checked-in reports
+!/assets/performance-pass/final-*.png
+!/assets/realism-pass/after-*.png

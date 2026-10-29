@@ -1,5 +1,15 @@
 # Egal performance report — 29 October 2026
 
+## Subsequent realism pass
+
+The current world adds procedural colour, atmosphere, terrain/vegetation, coast/water and roadside life. Every stage was separately measured, then rechecked as a complete production build. See [the realism report](../assets/realism-pass/REPORT.md) for the latest five-checkpoint before/after tables, resource payload, screenshots and test results. The rendering-pass figures below are retained as the earlier visual baseline, not relabelled as current realism figures.
+
+
+## Current scene performance pass
+
+The new request changes the loading contract: all currently available scenes, fonts and shader/light variants are warmed before START. See [the current measurements and implementation report](../assets/performance-pass/REPORT.md) and its raw JSON for production-preview numbers and remaining limits. The final stable 60 Hz run meets the median FPS targets. Physical-device performance is **not certified**: the host refresh cadence varied during earlier runs, and CPU-throttled mobile samples retain main-thread stalls. Earlier Lighthouse and 60 Hz frame results below are historical and must not be presented as this pass's results.
+
+
 ## Latest visual follow-up
 
 The subsequent terrain/Blender follow-up retains the opening's lazy boundary. Optimized car size is now **344,332 bytes** (previously 336,028), adding an exportable 512 px tire normal map while keeping 59,102 triangles. The final deferred World chunk is about **92.6 KB raw / 29.5 KB gzip**, roughly 2.5 KB raw above the hardening-only version. No initial model download was introduced. Original hardening payload tables below are retained as a baseline, not mislabeled as these new asset sizes.

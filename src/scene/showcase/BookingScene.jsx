@@ -55,8 +55,8 @@ function PricingBoard() {
   <Words position={[-1.43,1.92,.11]} fontSize={.36} anchorX="left">{bookingCopy.pricing}</Words><Words position={[-1.43,1.5,.11]} fontSize={.2} anchorX="left">{bookingCopy.starting}</Words>
   {cars.map((car,i)=><group key={car.id} position={[0,.95-i*.67,0]}>
    <PricingIcon type={car.id} position={[-1.12,-.08,.11]}/>
-   <Words position={[-.59,.08,.12]} fontSize={.18} anchorX="left">{car.category}</Words>
-   <Words position={[1.44,-.2,.12]} fontSize={.23} anchorX="right" color="#ffcb8c">{formatPrice(car.price)} /day</Words>
+   <Words position={[-.59,.08,.12]} fontSize={.20} fontWeight={400} anchorX="left">{car.category}</Words>
+   <Words position={[1.44,-.2,.12]} fontSize={.20} fontWeight={400} anchorX="right" color="#ffcb8c">{formatPrice(car.price)} /day</Words>
   </group>)}
  </group>
 }

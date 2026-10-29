@@ -4,7 +4,7 @@ import { LoadingManager } from 'three'
 import { cars, getCarModel, hasFleetModel } from '../../data/cars'
 import { parkedAsset } from './parkedAsset'
 
-const records=new Map(cars.map(car=>[car.id,{status:'idle',parts:null}]))
+const records=new Map(cars.map(car=>[car.id,{status:hasFleetModel(car.id)?'idle':'missing',parts:null}]))
 const listeners=new Set()
 let version=0,started=false,loader
 const subscribe=listener=>{listeners.add(listener);return()=>listeners.delete(listener)}
@@ -16,7 +16,7 @@ function idle(callback){
 }
 async function load(type){
  const record=records.get(type)
- if(!hasFleetModel(type)){record.status='missing';emit();return}
+ if(!hasFleetModel(type))return
  record.status='loading';emit()
  try {
   // A separate manager prevents deferred requests from changing the hero loader.

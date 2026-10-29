@@ -25,7 +25,7 @@ class AssetBoundary extends Component {
 
 function LoadedCar({ color, motion, onReady, low }) {
   const { scene } = useGLTF(MODEL_URL, false, true)
-  const model = useMemo(() => prepareCarModel(scene,{transmission:!low}), [scene,low])
+  const model = useMemo(() => prepareCarModel(scene), [scene])
   const turn = useMemo(() => new Quaternion(), [])
 
   useEffect(() => {

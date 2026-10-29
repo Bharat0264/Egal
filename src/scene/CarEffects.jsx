@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { AdditiveBlending, Color } from 'three'
-import { ContactShadows } from '@react-three/drei'
+import { AdditiveBlending, CanvasTexture, Color } from 'three'
 
 const vertexShader = `
   varying vec2 vUv;
@@ -11,11 +10,11 @@ const vertexShader = `
   }
 `
 
+let blob
 export function SoftCarShadow({ width, length }) {
+  const texture=useMemo(()=>{if(blob)return blob;const c=document.createElement('canvas');c.width=c.height=128;const ctx=c.getContext('2d'),g=ctx.createRadialGradient(64,64,10,64,64,64);g.addColorStop(0,'#ffffffff');g.addColorStop(.55,'#ffffffb0');g.addColorStop(1,'#ffffff00');ctx.fillStyle=g;ctx.fillRect(0,0,128,128);return blob=new CanvasTexture(c)},[])
   return (
-    <ContactShadows key={`${width}-${length}`} name="car-contact-shadow" position={[0, 0.026, 0]}
-      width={width * 1.45} height={length * 1.28} scale={1} opacity={0.35}
-      far={2.5} blur={1.8} resolution={256} frames={2} color="#182526" />
+    <mesh name="car-contact-shadow" position={[0,.026,0]} rotation={[-Math.PI/2,0,0]}><planeGeometry args={[width*1.4,length*1.25]}/><meshBasicMaterial map={texture} color="#182526" opacity={.35} transparent depthWrite={false}/></mesh>
   )
 }
 

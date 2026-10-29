@@ -1,7 +1,6 @@
 const smoothstep=(value,min,max)=>{const t=Math.max(0,Math.min(1,(value-min)/(max-min)));return t*t*(3-2*t)}
-// Prop windows may crossfade; text windows are exclusive, with quiet road-only gaps.
-export const SCENE_WINDOWS={fleet:[.14,.41],services:[.39,.58],booking:[.61,.79],contact:[.81,1]}
-const TEXT_WINDOWS={hero:[0,.14],fleet:[.14,.40],services:[.40,.58],booking:[.61,.79],contact:[.81,1]}
+export const SCENE_WINDOWS={fleet:[.14,.40],services:[.40,.60],booking:[.60,.80],contact:[.80,1]}
+const TEXT_WINDOWS={hero:[0,.14],...SCENE_WINDOWS}
 export function windowOpacity(offset,id,windows=SCENE_WINDOWS) {
  const range=windows[id]
  if(!range)return 0
@@ -13,4 +12,4 @@ export function windowOpacity(offset,id,windows=SCENE_WINDOWS) {
  const opacity=enter*leave
  return opacity<.0001?0:opacity
 }
-export const textOpacity=(offset,id)=>windowOpacity(offset,id,TEXT_WINDOWS)
+export function textOpacity(offset,id){offset=Math.round(offset*1000)/1000;const range=TEXT_WINDOWS[id];if(!range||offset<range[0]||(id!=='contact'&&offset>=range[1]))return 0;return id==='contact'?1:1-smoothstep(offset,range[1]-.02,range[1])}

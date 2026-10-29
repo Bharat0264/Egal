@@ -1,0 +1,244 @@
+{
+  "startDisabledDuringWarmup": true,
+  "warmupMs": 16705.59999999404,
+  "initialDpr": 1.25,
+  "shadersAtStart": 252,
+  "scenes": [
+    {
+      "offset": 0,
+      "mounted": [
+        "fleet-bay"
+      ],
+      "titles": [
+        "hero"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 59.88023945684179,
+      "frameTime": 16.700000017881393,
+      "drawCalls": 68,
+      "triangles": 129928,
+      "textures": 40,
+      "geometries": 118,
+      "programs": 122
+    },
+    {
+      "offset": 0.07,
+      "mounted": [
+        "fleet-bay"
+      ],
+      "titles": [
+        "hero"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 61.72839499359323,
+      "frameTime": 16.200000017881393,
+      "drawCalls": 68,
+      "triangles": 132880,
+      "textures": 40,
+      "geometries": 118,
+      "programs": 122
+    },
+    {
+      "offset": 0.12,
+      "mounted": [
+        "fleet-bay"
+      ],
+      "titles": [
+        "hero"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 58.8235294117647,
+      "frameTime": 17,
+      "drawCalls": 67,
+      "triangles": 134265,
+      "textures": 40,
+      "geometries": 118,
+      "programs": 122
+    },
+    {
+      "offset": 0.25,
+      "mounted": [
+        "fleet-bay",
+        "services-fork"
+      ],
+      "titles": [
+        "fleet"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 58.47953218412662,
+      "frameTime": 17.099999994039536,
+      "drawCalls": 110,
+      "triangles": 360497,
+      "textures": 40,
+      "geometries": 118,
+      "programs": 122
+    },
+    {
+      "offset": 0.4,
+      "mounted": [
+        "fleet-bay",
+        "services-fork",
+        "toll-gate"
+      ],
+      "titles": [
+        "services"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 58.8235294117647,
+      "frameTime": 17,
+      "drawCalls": 52,
+      "triangles": 128061,
+      "textures": 40,
+      "geometries": 118,
+      "programs": 122
+    },
+    {
+      "offset": 0.5,
+      "mounted": [
+        "fleet-bay",
+        "services-fork",
+        "toll-gate"
+      ],
+      "titles": [
+        "services"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 59.17159761226685,
+      "frameTime": 16.900000005960464,
+      "drawCalls": 102,
+      "triangles": 135904,
+      "textures": 40,
+      "geometries": 156,
+      "programs": 122
+    },
+    {
+      "offset": 0.6,
+      "mounted": [
+        "fleet-bay",
+        "services-fork",
+        "toll-gate"
+      ],
+      "titles": [
+        "booking"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 59.17159761226685,
+      "frameTime": 16.900000005960464,
+      "drawCalls": 67,
+      "triangles": 128677,
+      "textures": 40,
+      "geometries": 156,
+      "programs": 122
+    },
+    {
+      "offset": 0.7,
+      "mounted": [
+        "services-fork",
+        "toll-gate",
+        "egal-destination"
+      ],
+      "titles": [
+        "booking"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 66.66666666666667,
+      "frameTime": 15,
+      "drawCalls": 113,
+      "triangles": 139607,
+      "textures": 40,
+      "geometries": 185,
+      "programs": 122
+    },
+    {
+      "offset": 0.8,
+      "mounted": [
+        "services-fork",
+        "toll-gate",
+        "egal-destination"
+      ],
+      "titles": [
+        "contact"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 60.60606060606061,
+      "frameTime": 16.5,
+      "drawCalls": 71,
+      "triangles": 132983,
+      "textures": 40,
+      "geometries": 185,
+      "programs": 122
+    },
+    {
+      "offset": 0.95,
+      "mounted": [
+        "toll-gate",
+        "egal-destination"
+      ],
+      "titles": [
+        "contact"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 23.201856151700554,
+      "frameTime": 43.099999994039536,
+      "drawCalls": 139,
+      "triangles": 258817,
+      "textures": 40,
+      "geometries": 175,
+      "programs": 122
+    },
+    {
+      "offset": 1,
+      "mounted": [
+        "toll-gate",
+        "egal-destination"
+      ],
+      "titles": [
+        "contact"
+      ],
+      "transmission": 0,
+      "shaders": 252,
+      "fps": 10.59322033831419,
+      "frameTime": 94.40000000596046,
+      "drawCalls": 139,
+      "triangles": 258817,
+      "textures": 40,
+      "geometries": 175,
+      "programs": 122
+    }
+  ],
+  "dragRadians": 1.0887360000014306,
+  "world": {
+    "expFog": true,
+    "density": 0.0038,
+    "terrainVertices": 21645,
+    "maxWeightError": 5.960464477539063e-8,
+    "textureMax": 1024,
+    "normalMapsDistinct": true,
+    "palmVariants": true,
+    "impostors": true,
+    "trafficCount": 4,
+    "noShadowMaps": true
+  },
+  "cycles": [
+    {
+      "geometries": 118,
+      "textures": 40,
+      "programs": 122
+    },
+    {
+      "geometries": 118,
+      "textures": 40,
+      "programs": 122
+    }
+  ]
+}

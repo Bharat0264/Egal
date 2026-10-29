@@ -1,0 +1,487 @@
+[
+  {
+    "label": "01-colour",
+    "width": 1440,
+    "cpuThrottle": 1,
+    "environmentFps": 59.88023952095833,
+    "payload": {
+      "decodedBytes": 2134780,
+      "transferredBytes": 924439
+    },
+    "device": {
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "cores": 16,
+      "memory": 16
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "medianMs": 16.599999994039536,
+        "p95Ms": 17.100000023841858,
+        "fps": 60.24096387705205,
+        "browserRafMedian": 16.600000000002183,
+        "drawCalls": 55,
+        "triangles": 137124,
+        "textures": 32,
+        "geometries": 102,
+        "programs": 100,
+        "newPrograms": 0,
+        "longTasks": [],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "sea-and-shore",
+            "triangles": 16000,
+            "material": "ShaderMaterial"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Glass",
+            "triangles": 9520,
+            "material": "Glass"
+          }
+        ],
+        "dpr": 1.1043901168907937,
+        "renders": 40
+      },
+      {
+        "offset": 0.25,
+        "medianMs": 16.799999982118607,
+        "p95Ms": 17.600000023841858,
+        "fps": 59.5238095871648,
+        "browserRafMedian": 16.700000000000728,
+        "drawCalls": 102,
+        "triangles": 374712,
+        "textures": 32,
+        "geometries": 102,
+        "programs": 100,
+        "newPrograms": 0,
+        "longTasks": [
+          159
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "sea-and-shore",
+            "triangles": 16000,
+            "material": "ShaderMaterial"
+          },
+          {
+            "name": "hatchback-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "sedan-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "suv-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          }
+        ],
+        "dpr": 1.0100198938362104,
+        "renders": 40
+      },
+      {
+        "offset": 0.5,
+        "medianMs": 16.600000023841858,
+        "p95Ms": 17.400000005960464,
+        "fps": 60.24096376890021,
+        "browserRafMedian": 16.69999999999709,
+        "drawCalls": 90,
+        "triangles": 142926,
+        "textures": 32,
+        "geometries": 140,
+        "programs": 100,
+        "newPrograms": 0,
+        "longTasks": [],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "sea-and-shore",
+            "triangles": 16000,
+            "material": "ShaderMaterial"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Glass",
+            "triangles": 9520,
+            "material": "Glass"
+          }
+        ],
+        "dpr": 1.0100198938362104,
+        "renders": 40
+      },
+      {
+        "offset": 0.75,
+        "medianMs": 16.599999994039536,
+        "p95Ms": 17.799999982118607,
+        "fps": 60.24096387705205,
+        "browserRafMedian": 16.700000000000728,
+        "drawCalls": 108,
+        "triangles": 152524,
+        "textures": 32,
+        "geometries": 169,
+        "programs": 100,
+        "newPrograms": 0,
+        "longTasks": [
+          117,
+          74
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "sea-and-shore",
+            "triangles": 16000,
+            "material": "ShaderMaterial"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Glass",
+            "triangles": 9520,
+            "material": "Glass"
+          }
+        ],
+        "dpr": 1.0100198938362104,
+        "renders": 40
+      },
+      {
+        "offset": 1,
+        "medianMs": 16.69999998807907,
+        "p95Ms": 18.19999998807907,
+        "fps": 59.88023956370228,
+        "browserRafMedian": 16.69999999999709,
+        "drawCalls": 128,
+        "triangles": 266840,
+        "textures": 32,
+        "geometries": 159,
+        "programs": 100,
+        "newPrograms": 0,
+        "longTasks": [
+          55
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "sea-and-shore",
+            "triangles": 16000,
+            "material": "ShaderMaterial"
+          },
+          {
+            "name": "sedan-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "sedan-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          }
+        ],
+        "dpr": 1.0100198938362104,
+        "renders": 40
+      }
+    ],
+    "errors": []
+  },
+  {
+    "label": "01-colour",
+    "width": 390,
+    "cpuThrottle": 4,
+    "environmentFps": 59.88023952095833,
+    "payload": {
+      "decodedBytes": 2134780,
+      "transferredBytes": 924439
+    },
+    "device": {
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "cores": 16,
+      "memory": 16
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "medianMs": 16.80000001192093,
+        "p95Ms": 19.400000005960464,
+        "fps": 59.52380948157267,
+        "browserRafMedian": 16.69999999999891,
+        "drawCalls": 53,
+        "triangles": 113584,
+        "textures": 32,
+        "geometries": 102,
+        "programs": 101,
+        "newPrograms": 0,
+        "longTasks": [],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Glass",
+            "triangles": 9520,
+            "material": "Glass"
+          },
+          {
+            "name": "batch-Egal_production_web_export-LampHousing",
+            "triangles": 6900,
+            "material": "LampHousing"
+          }
+        ],
+        "dpr": 1.006829511691724,
+        "renders": 40
+      },
+      {
+        "offset": 0.25,
+        "medianMs": 19.400000005960464,
+        "p95Ms": 44.20000001788139,
+        "fps": 51.54639173674018,
+        "browserRafMedian": 16.700000000000728,
+        "drawCalls": 102,
+        "triangles": 351570,
+        "textures": 32,
+        "geometries": 102,
+        "programs": 101,
+        "newPrograms": 0,
+        "longTasks": [
+          233
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "hatchback-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "sedan-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "suv-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "premium-suv-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          }
+        ],
+        "dpr": 1.006829511691724,
+        "renders": 40
+      },
+      {
+        "offset": 0.5,
+        "medianMs": 19.099999994039536,
+        "p95Ms": 32.30000001192093,
+        "fps": 52.356020958746925,
+        "browserRafMedian": 16.700000000000728,
+        "drawCalls": 85,
+        "triangles": 120658,
+        "textures": 32,
+        "geometries": 140,
+        "programs": 101,
+        "newPrograms": 0,
+        "longTasks": [
+          196,
+          79
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Glass",
+            "triangles": 9520,
+            "material": "Glass"
+          },
+          {
+            "name": "batch-Egal_production_web_export-LampHousing",
+            "triangles": 6900,
+            "material": "LampHousing"
+          }
+        ],
+        "dpr": 1.006829511691724,
+        "renders": 40
+      },
+      {
+        "offset": 0.75,
+        "medianMs": 22.400000005960464,
+        "p95Ms": 32.5,
+        "fps": 44.64285713097803,
+        "browserRafMedian": 16.700000000000728,
+        "drawCalls": 97,
+        "triangles": 118592,
+        "textures": 32,
+        "geometries": 169,
+        "programs": 101,
+        "newPrograms": 0,
+        "longTasks": [
+          125,
+          363
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Glass",
+            "triangles": 9520,
+            "material": "Glass"
+          },
+          {
+            "name": "batch-Egal_production_web_export-LampHousing",
+            "triangles": 6900,
+            "material": "LampHousing"
+          }
+        ],
+        "dpr": 1.006829511691724,
+        "renders": 40
+      },
+      {
+        "offset": 1,
+        "medianMs": 23.100000023841858,
+        "p95Ms": 45.099999994039536,
+        "fps": 43.29004324536299,
+        "browserRafMedian": 33.20000000000073,
+        "drawCalls": 118,
+        "triangles": 237278,
+        "textures": 32,
+        "geometries": 159,
+        "programs": 101,
+        "newPrograms": 0,
+        "longTasks": [
+          129,
+          112,
+          64
+        ],
+        "topGeometry": [
+          {
+            "name": "continuous-ground",
+            "triangles": 42688,
+            "material": "MeshStandardMaterial"
+          },
+          {
+            "name": "sedan-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "sedan-Trim",
+            "triangles": 12642,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Egal_production_web_export-Trim",
+            "triangles": 10992,
+            "material": "Trim"
+          },
+          {
+            "name": "batch-Body-BodyPaint",
+            "triangles": 10312,
+            "material": "BodyPaint"
+          }
+        ],
+        "dpr": 1.006829511691724,
+        "renders": 40
+      }
+    ],
+    "errors": []
+  }
+]

@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { BufferGeometry, Float32BufferAttribute, CatmullRomCurve3, MathUtils, Vector3 } from 'three'
 import { brand } from '../data/brand'
-import { asphaltTextures } from './world/textures'
+import { asphaltTextures, lanePaintTexture } from './world/textures'
 
 // Includes the wheels: the asphalt is exactly 2.5 times the car's full width.
 export const CAR_WIDTH = 2.025
@@ -56,7 +56,7 @@ export function createRibbon(width, ranges, lateralOffset = 0, elevation = 0, cu
 }
 
 export default function Road() {
-  const textures = useMemo(asphaltTextures, [])
+  const textures = useMemo(asphaltTextures, []),paint=useMemo(lanePaintTexture,[])
   const geometry = useMemo(() => {
     const continuous = [{ start: 0, end: 1, segments: 300 }]
     const dashes = []
@@ -77,11 +77,11 @@ export default function Road() {
         <meshStandardMaterial {...textures} roughness={0.72} metalness={0.08} />
       </mesh>
       <mesh name="centre-line" geometry={geometry.centre}>
-        <meshBasicMaterial color="#F8C66C" />
+        <meshBasicMaterial color="#F8C66C" map={paint} alphaTest={.35}/>
       </mesh>
       {[geometry.left, geometry.right].map((edge, index) => (
         <mesh name={`edge-line-${index}`} key={index} geometry={edge}>
-          <meshBasicMaterial color={brand.colors.cream} />
+          <meshBasicMaterial color={brand.colors.cream} map={paint} alphaTest={.35}/>
         </mesh>
       ))}
     </group>

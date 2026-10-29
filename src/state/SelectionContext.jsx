@@ -11,29 +11,34 @@ function createSelection() {
   const scrollRef = { current: null }, htmlPortal = { current: null }
   const journeyMotion = { current: { gateDrive: 0 } }
   const interaction = { current: { yaw: 0, velocity: 0, dragging: false, lastInput: 0 } }
+  const selectionRef={current:{index:0}},fleetViewRef={current:null}
   const update = patch => {
     if (Object.keys(patch).every(key => Object.is(state[key],patch[key]))) return
     state = { ...state,...patch }; listeners.forEach(listener => listener())
   }
   const jump = offset => {
     const el = scrollRef.current?.el
-    el?.scrollTo({ top: (el.scrollHeight - el.clientHeight) * offset, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth' })
+    el?.scrollTo({ top: (el.scrollHeight - el.clientHeight) * offset, behavior:'instant' })
   }
   const bookingOffset = Math.max(sections.find(s => s.id === 'booking').range[0],SCENE_WINDOWS.booking[0]+.02)
   const actions = {
-    scrollRef, htmlPortal, interaction, journeyMotion, jump,
+    scrollRef, htmlPortal, interaction, journeyMotion, jump,selectionRef,fleetViewRef,readSelection:()=>state,
+    scrollSelect(index){if(selectionRef.current.index===index)return;selectionRef.current.index=index;interaction.current.yaw=0;interaction.current.velocity=0;fleetViewRef.current?.();track('car_selected',{car:cars[index].id})},
     selectCar(index) {
+      selectionRef.current.index=(index+cars.length)%cars.length
       track('car_selected',{car:cars[(index+cars.length)%cars.length].id})
       update({ fleetIndex: (index + cars.length) % cars.length })
+      fleetViewRef.current?.()
       interaction.current.yaw = 0; interaction.current.velocity = 0
     },
     recolor(index,color) { track('colour_changed',{car:cars[index].id,colour:['#ffffff','#111111','#1e4fb8','#c0161b','#8a8d91'].indexOf(color)});update({ colors: state.colors.map((c,i) => i === index ? color : c) }) },
     setServiceId(serviceId) { update({serviceId}) },
-    bookCar() { track('book_this_car',{car:cars[state.fleetIndex].id});update({ selectedCar: { ...cars[state.fleetIndex], color: state.colors[state.fleetIndex] }, serviceId: null }); jump(bookingOffset) },
+    bookCar() { const index=selectionRef.current.index;track('book_this_car',{car:cars[index].id});update({ selectedCar: { ...cars[index], color: state.colors[index] }, serviceId: null }); jump(bookingOffset) },
     bookService() { update({selectedService:state.serviceId || 'self-drive',serviceId:null});jump(bookingOffset) },
     completeBooking(result) { update({bookingStatus:'success', bookingResult:result, bookingAt: scrollRef.current?.offset ?? .7}) },
     resetBooking() { update({bookingStatus:'idle',bookingResult:null}) },
     backToStart() {
+      selectionRef.current.index=0
       journeyMotion.current.gateDrive = 0
       interaction.current = {yaw:0,velocity:0,dragging:false,lastInput:0}
       update({fleetIndex:0,colors:cars.map(car=>car.color),selectedCar:null,serviceId:null,selectedService:'self-drive',bookingStatus:'idle',bookingResult:null,resetVersion:state.resetVersion+1})

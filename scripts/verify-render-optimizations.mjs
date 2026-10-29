@@ -3,7 +3,7 @@ import fs from 'node:fs/promises'
 import { GLTFLoader, MeshoptDecoder } from 'three-stdlib'
 import { Box3, Vector3 } from 'three'
 import { prepareCarModel } from '../src/scene/carModel.js'
-import { createQualityController, qualityProfile } from '../src/scene/world/renderQuality.js'
+import { qualityProfile } from '../src/scene/world/renderQuality.js'
 const loader=new GLTFLoader().setMeshoptDecoder(typeof MeshoptDecoder==='function'?MeshoptDecoder():MeshoptDecoder)
 loader.register(()=>({name:'EXT_texture_webp',loadTexture:async()=>null}))
 const bytes=await fs.readFile('public/models/car.opt.glb')
@@ -19,13 +19,7 @@ for(const wheel of car.wheels){assert.ok(wheel.spin.children.some(o=>o.name.star
 assert.ok(car.paintMaterials.every(m=>m.name==='BodyPaint'))
 let draws=0;car.root.traverse(o=>{if(o.isMesh&&o.geometry.attributes.position.count)draws++})
 assert.ok(draws<40)
-const profile=qualityProfile({coarse:true,cores:8,memory:8,dpr:3}),controller=createQualityController(profile)
-assert.equal(profile.max,1.35)
-for(let i=0;i<160;i++)controller.sample(.05)
-assert.ok(controller.target<profile.max)
-for(let i=0;i<3000;i++)controller.sample(.05)
-assert.ok(controller.target>=profile.min)
-for(let i=0;i<3000;i++)controller.sample(1/60)
-assert.ok(controller.target<=profile.max&&controller.target>profile.min)
+const profile=qualityProfile({coarse:true,cores:8,memory:8,dpr:3})
+assert.equal(profile.initial,1.25);assert.equal(profile.max,1.75);assert.equal(profile.min,1)
 car.dispose()
-console.log(`PASS unchanged ${before} triangles/silhouette, ${draws} batched draws, grounded 4.3m car, live wheel pivots, original asset isolation and quality hysteresis.`)
+console.log(`PASS unchanged ${before} triangles/silhouette, ${draws} batched draws, grounded 4.3m car, live wheel pivots, original asset isolation and adaptive DPR bounds.`)

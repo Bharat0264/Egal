@@ -11,7 +11,7 @@ export const CAR_NODES = [
 
 // The approved Blender export guarantees Y-up/+Z-forward and explicit part names.
 // Clone the cached scene and materials; geometry/texture data stays read-only.
-export function prepareCarModel(scene, { length = 4.3, transmission = true } = {}) {
+export function prepareCarModel(scene, { length = 4.3 } = {}) {
   const root = new Group()
   root.name = 'egal-normalized-car'
   const model = clone(scene)
@@ -42,11 +42,12 @@ export function prepareCarModel(scene, { length = 4.3, transmission = true } = {
         const material = source.clone()
         // Thin tinted glass/lamp covers on mobile use alpha + environment
         // reflections instead of a full second rendering of the whole world.
-        if(!transmission&&material.transmission>0){
+        if(material.transmission>0){
           material.transmission=0;material.transparent=true;material.depthWrite=false
           material.opacity=material.name==='Glass'?.88:material.name==='LampLens_Red'?.15:.1
         }
         if (material.name === 'Glass') material.depthWrite = false
+        material.transparent=true;material.forceSinglePass=true
         materials.set(source, material)
       }
       return materials.get(source)

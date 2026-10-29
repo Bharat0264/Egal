@@ -12,7 +12,7 @@ export default function useCarMotion(anchor, suspension) {
   const {journeyMotion}=useSelectionActions()
   const motion = useRef({ distance: 0, speed: 0, steer: 0, brake: 0, phase: 0 })
   const scratch = useMemo(() => ({ point: new Vector3(), tangent: new Vector3(), before: new Vector3(), after: new Vector3(), movement: new Vector3() }), [])
-  const previous = useRef({ speed: 0, point: null })
+  const previous = useRef({ speed: 0, point: new Vector3(),started:false })
 
   useFrame((_, delta) => {
     const dt = Math.min(delta, 0.1)
@@ -21,7 +21,7 @@ export default function useCarMotion(anchor, suspension) {
     anchor.current.position.copy(scratch.point)
     anchor.current.rotation.y = Math.atan2(scratch.tangent.x, scratch.tangent.z)
 
-    const movement = previous.current.point ? scratch.movement.subVectors(scratch.point,previous.current.point) : scratch.movement.setScalar(0)
+    const movement = previous.current.started ? scratch.movement.subVectors(scratch.point,previous.current.point) : scratch.movement.setScalar(0)
     const travelled = movement.length() * (movement.dot(scratch.tangent)<0?-1:1)
     const speed = Math.min(Math.abs(travelled)/Math.max(delta,1/120)*.08,1)
     const span = 0.002
@@ -43,7 +43,7 @@ export default function useCarMotion(anchor, suspension) {
     suspension.current.rotation.z = -motion.current.steer * motion.current.speed * 0.12
     suspension.current.position.y = (Math.sin(motion.current.phase) + 1) * motion.current.speed * 0.003
     previous.current.speed = speed
-    if(!previous.current.point)previous.current.point=new Vector3()
+    previous.current.started=true
     previous.current.point.copy(scratch.point)
   })
   return motion
