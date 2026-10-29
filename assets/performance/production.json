@@ -1,0 +1,196 @@
+[
+  {
+    "width": 1440,
+    "cpuThrottle": 1,
+    "initial": {
+      "ready": 283.7000000178814,
+      "lcp": 220,
+      "cls": 0.0022038381317515433,
+      "resources": [
+        {
+          "url": "http://localhost:4173/assets/index-C5wpDTKv.js",
+          "bytes": 109774
+        },
+        {
+          "url": "http://localhost:4173/assets/rolldown-runtime-XKyaHtl9.js",
+          "bytes": 726
+        },
+        {
+          "url": "http://localhost:4173/assets/three-DA1FVgUF.js",
+          "bytes": 763799
+        },
+        {
+          "url": "http://localhost:4173/assets/vendor-n82z3Njy.js",
+          "bytes": 768607
+        },
+        {
+          "url": "http://localhost:4173/assets/index-D3waTkpF.css",
+          "bytes": 26472
+        },
+        {
+          "url": "http://localhost:4173/models/car.opt.glb",
+          "bytes": 336028
+        },
+        {
+          "url": "http://localhost:4173/favicon.svg",
+          "bytes": 178
+        }
+      ],
+      "bytes": 2005584
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "median": 16.69999999999891,
+        "p95": 16.899999999999636,
+        "visible": [
+          "hero"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.28,
+        "median": 16.700000000000728,
+        "p95": 17,
+        "visible": [
+          "fleet"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.5,
+        "median": 16.700000000000728,
+        "p95": 16.899999999997817,
+        "visible": [
+          "services"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.7,
+        "median": 16.69999999999709,
+        "p95": 16.80000000000291,
+        "visible": [
+          "booking"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.95,
+        "median": 16.69999999999709,
+        "p95": 16.80000000000291,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 1,
+        "median": 16.69999999999709,
+        "p95": 16.80000000000291,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      }
+    ],
+    "messages": []
+  },
+  {
+    "width": 390,
+    "cpuThrottle": 4,
+    "initial": {
+      "ready": 3398.5999999940395,
+      "lcp": 804,
+      "cls": 0.007770492788461539,
+      "resources": [
+        {
+          "url": "http://localhost:4173/assets/index-C5wpDTKv.js",
+          "bytes": 109774
+        },
+        {
+          "url": "http://localhost:4173/assets/rolldown-runtime-XKyaHtl9.js",
+          "bytes": 726
+        },
+        {
+          "url": "http://localhost:4173/assets/three-DA1FVgUF.js",
+          "bytes": 763799
+        },
+        {
+          "url": "http://localhost:4173/assets/vendor-n82z3Njy.js",
+          "bytes": 768607
+        },
+        {
+          "url": "http://localhost:4173/assets/index-D3waTkpF.css",
+          "bytes": 26472
+        },
+        {
+          "url": "http://localhost:4173/models/car.opt.glb",
+          "bytes": 336028
+        },
+        {
+          "url": "http://localhost:4173/favicon.svg",
+          "bytes": 178
+        }
+      ],
+      "bytes": 2005584
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "median": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "visible": [
+          "hero"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.28,
+        "median": 33.29999999999927,
+        "p95": 49.899999999999636,
+        "visible": [
+          "fleet"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.5,
+        "median": 16.799999999999272,
+        "p95": 33.5,
+        "visible": [
+          "services"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.7,
+        "median": 16.799999999999272,
+        "p95": 33.400000000001455,
+        "visible": [
+          "booking"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.95,
+        "median": 33.400000000001455,
+        "p95": 66.69999999999709,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 1,
+        "median": 33.299999999995634,
+        "p95": 33.400000000001455,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      }
+    ],
+    "messages": []
+  }
+]

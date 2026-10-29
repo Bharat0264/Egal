@@ -1,0 +1,104 @@
+{
+  "initialResources": [
+    {
+      "url": "/assets/index-DRBk6Atw.js",
+      "decoded": 79363,
+      "encoded": 24765
+    },
+    {
+      "url": "/assets/rolldown-runtime-XKyaHtl9.js",
+      "decoded": 726,
+      "encoded": 429
+    },
+    {
+      "url": "/assets/index-DMfe8d8K.css",
+      "decoded": 34084,
+      "encoded": 8517
+    },
+    {
+      "url": "/assets/react-vendor-0dVjMmOy.js",
+      "decoded": 219331,
+      "encoded": 67691
+    },
+    {
+      "url": "/images/egal-logo.webp",
+      "decoded": 69610,
+      "encoded": 69610
+    },
+    {
+      "url": "/favicon-32.png",
+      "decoded": 1550,
+      "encoded": 1550
+    }
+  ],
+  "startedResources": [
+    {
+      "url": "/assets/index-DRBk6Atw.js",
+      "decoded": 79363,
+      "encoded": 24765
+    },
+    {
+      "url": "/assets/rolldown-runtime-XKyaHtl9.js",
+      "decoded": 726,
+      "encoded": 429
+    },
+    {
+      "url": "/assets/index-DMfe8d8K.css",
+      "decoded": 34084,
+      "encoded": 8517
+    },
+    {
+      "url": "/assets/react-vendor-0dVjMmOy.js",
+      "decoded": 219331,
+      "encoded": 67691
+    },
+    {
+      "url": "/images/egal-logo.webp",
+      "decoded": 69610,
+      "encoded": 69610
+    },
+    {
+      "url": "/favicon-32.png",
+      "decoded": 1550,
+      "encoded": 1550
+    },
+    {
+      "url": "/assets/World-B0wpDu-r.js",
+      "decoded": 90144,
+      "encoded": 28277
+    },
+    {
+      "url": "/assets/three-DA1FVgUF.js",
+      "decoded": 763799,
+      "encoded": 195314
+    },
+    {
+      "url": "/assets/webgl-CDj8pkAa.js",
+      "decoded": 444768,
+      "encoded": 145808
+    },
+    {
+      "url": "/assets/gsap-CQ4Bke8s.js",
+      "decoded": 69566,
+      "encoded": 27055
+    },
+    {
+      "url": "/models/versioned/3fb5f3d2c15c00a8/car.opt.glb",
+      "decoded": 336028,
+      "encoded": 336028
+    }
+  ],
+  "startBeforeModelReady": true,
+  "laterDateHydration": true,
+  "keyboardViewportEmulated": true,
+  "unsupportedWebGLFallback": true,
+  "failedSceneChunkFallback": true,
+  "lowPower": {
+    "dpr": 1,
+    "quality": "performance"
+  },
+  "hiddenAndOffscreenPause": true,
+  "runtimeWarnings": [],
+  "uniquePrerenderedMetadata": true,
+  "noServerSecretsInBrowser": true
+}

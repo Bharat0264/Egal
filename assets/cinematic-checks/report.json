@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "messages": [],
+    "start": true,
+    "booking": true,
+    "soundPreference": true,
+    "scrollBothDirections": true
+  },
+  {
+    "mode": "mobile",
+    "width": 390,
+    "messages": [],
+    "start": true,
+    "booking": true,
+    "soundPreference": true,
+    "scrollBothDirections": true
+  },
+  {
+    "mode": "reduced",
+    "width": 1440,
+    "messages": [],
+    "start": true,
+    "booking": true,
+    "soundPreference": true,
+    "scrollBothDirections": true
+  },
+  {
+    "mode": "low-power",
+    "width": 1440,
+    "messages": [],
+    "start": true,
+    "booking": true,
+    "soundPreference": true,
+    "scrollBothDirections": true
+  }
+]

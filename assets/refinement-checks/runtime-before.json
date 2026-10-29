@@ -1,0 +1,150 @@
+[
+  {
+    "width": 1440,
+    "cpuThrottle": 1,
+    "device": {
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "cores": 16,
+      "memory": 16
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "medianMs": 16.69999999999891,
+        "p95Ms": 16.799999999999272,
+        "drawCalls": 108,
+        "triangles": 335574,
+        "dpr": 1,
+        "quality": "high"
+      },
+      {
+        "offset": 0.28,
+        "medianMs": 16.700000000000728,
+        "p95Ms": 16.799999999999272,
+        "drawCalls": 108,
+        "triangles": 408240,
+        "dpr": 1,
+        "quality": "high"
+      },
+      {
+        "offset": 0.5,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.799999999999272,
+        "drawCalls": 149,
+        "triangles": 343206,
+        "dpr": 1,
+        "quality": "high"
+      },
+      {
+        "offset": 0.7,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.799999999999272,
+        "drawCalls": 155,
+        "triangles": 340624,
+        "dpr": 1,
+        "quality": "high"
+      },
+      {
+        "offset": 0.95,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.80000000000291,
+        "drawCalls": 188,
+        "triangles": 463470,
+        "dpr": 1,
+        "quality": "high"
+      },
+      {
+        "offset": 1,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.80000000000291,
+        "drawCalls": 188,
+        "triangles": 463470,
+        "dpr": 1,
+        "quality": "high"
+      }
+    ],
+    "memoryBefore": {
+      "geometries": 220,
+      "textures": 39
+    },
+    "memoryAfter": {
+      "geometries": 220,
+      "textures": 39
+    },
+    "messages": []
+  },
+  {
+    "width": 390,
+    "cpuThrottle": 4,
+    "device": {
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "cores": 16,
+      "memory": 16
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "medianMs": 16.700000000000728,
+        "p95Ms": 33.29999999999927,
+        "drawCalls": 58,
+        "triangles": 144348,
+        "dpr": 1.35,
+        "quality": "balanced"
+      },
+      {
+        "offset": 0.28,
+        "medianMs": 16.700000000000728,
+        "p95Ms": 83.40000000000146,
+        "drawCalls": 107,
+        "triangles": 367794,
+        "dpr": 1.35,
+        "quality": "balanced"
+      },
+      {
+        "offset": 0.5,
+        "medianMs": 33.400000000001455,
+        "p95Ms": 50.099999999998545,
+        "drawCalls": 101,
+        "triangles": 151552,
+        "dpr": 1.0102147349484687,
+        "quality": "performance"
+      },
+      {
+        "offset": 0.7,
+        "medianMs": 33.400000000001455,
+        "p95Ms": 50,
+        "drawCalls": 106,
+        "triangles": 149400,
+        "dpr": 1.0102147349484687,
+        "quality": "performance"
+      },
+      {
+        "offset": 0.95,
+        "medianMs": 50,
+        "p95Ms": 66.70000000000437,
+        "drawCalls": 130,
+        "triangles": 270524,
+        "dpr": 1.0102147349484687,
+        "quality": "performance"
+      },
+      {
+        "offset": 1,
+        "medianMs": 33.400000000001455,
+        "p95Ms": 50.10000000000582,
+        "drawCalls": 130,
+        "triangles": 270524,
+        "dpr": 1.0102147349484687,
+        "quality": "performance"
+      }
+    ],
+    "memoryBefore": {
+      "geometries": 219,
+      "textures": 38
+    },
+    "memoryAfter": {
+      "geometries": 219,
+      "textures": 38
+    },
+    "messages": []
+  }
+]

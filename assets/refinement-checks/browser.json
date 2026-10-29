@@ -1,0 +1,20 @@
+{
+  "normalMap": {
+    "width": 512,
+    "height": 512
+  },
+  "normalMaterials": [
+    "Tire"
+  ],
+  "ground": {
+    "vertices": 21645,
+    "triangles": 42688,
+    "validGrid": true
+  },
+  "maxSpurGround": -0.08,
+  "rocks": 82,
+  "model": "http://localhost:5173/models/versioned/279d6d199b156ae0/car.opt.glb",
+  "renderer": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "cameraRecoveryDistance": 0.13436917057763162,
+  "messages": []
+}

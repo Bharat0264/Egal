@@ -1,0 +1,124 @@
+{
+  "chunks": [
+    {
+      "file": "gsap-CQ4Bke8s.js",
+      "bytes": 69566,
+      "gzip": 27055
+    },
+    {
+      "file": "index-DMfe8d8K.css",
+      "bytes": 34084,
+      "gzip": 8517
+    },
+    {
+      "file": "index-DRBk6Atw.js",
+      "bytes": 79363,
+      "gzip": 24765
+    },
+    {
+      "file": "react-vendor-0dVjMmOy.js",
+      "bytes": 219331,
+      "gzip": 67691
+    },
+    {
+      "file": "rolldown-runtime-XKyaHtl9.js",
+      "bytes": 726,
+      "gzip": 429
+    },
+    {
+      "file": "three-DA1FVgUF.js",
+      "bytes": 763799,
+      "gzip": 195314
+    },
+    {
+      "file": "webgl-CDj8pkAa.js",
+      "bytes": 444768,
+      "gzip": 145808
+    },
+    {
+      "file": "World-B0wpDu-r.js",
+      "bytes": 90144,
+      "gzip": 28277
+    }
+  ],
+  "totalJavaScript": {
+    "bytes": 1667697,
+    "gzip": 489339
+  },
+  "initialResources": {
+    "bytes": 417770,
+    "encoded": 176160
+  },
+  "startedResources": {
+    "bytes": 2122075,
+    "encoded": 908642
+  },
+  "html": {
+    "home": 13106,
+    "simple": 12282
+  },
+  "previousInitialResources": [
+    {
+      "width": 1440,
+      "bytes": 3780302
+    },
+    {
+      "width": 390,
+      "bytes": 3780302
+    }
+  ],
+  "lighthouse": [
+    {
+      "route": "home",
+      "fetchTime": "2026-10-29T01:41:31.820Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1540.1601,
+        "largest-contentful-paint": 1990.1601,
+        "total-blocking-time": 0,
+        "speed-index": 1540.1601,
+        "cumulative-layout-shift": 0
+      },
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    {
+      "route": "simple",
+      "fetchTime": "2026-10-29T01:42:36.164Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1732.5765,
+        "largest-contentful-paint": 2332.5765,
+        "total-blocking-time": 165.5,
+        "speed-index": 1732.5765,
+        "cumulative-layout-shift": 0
+      },
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    }
+  ]
+}

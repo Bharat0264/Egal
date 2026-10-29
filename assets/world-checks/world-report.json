@@ -1,0 +1,572 @@
+{
+  "measurement": "Headless Microsoft Edge, local machine, WebGL renderer recorded below. CPU throttle is a simulation, not a physical phone.",
+  "alignment": [
+    {
+      "offset": 0,
+      "error": 0,
+      "distance": 7.499999999999999,
+      "height": 1.9,
+      "fov": 45,
+      "fog": "f8c1a9",
+      "instances": [
+        {
+          "name": "clouds",
+          "count": 9
+        },
+        {
+          "name": "boat-hulls",
+          "count": 4
+        },
+        {
+          "name": "boat-sails",
+          "count": 4
+        },
+        {
+          "name": "boat-masts",
+          "count": 4
+        },
+        {
+          "name": "palm-trunks",
+          "count": 200
+        },
+        {
+          "name": "palm-fronds",
+          "count": 200
+        },
+        {
+          "name": "shrubs",
+          "count": 131
+        },
+        {
+          "name": "coastal-rocks",
+          "count": 88
+        },
+        {
+          "name": "kerbs",
+          "count": 362
+        },
+        {
+          "name": "guard-posts",
+          "count": 181
+        },
+        {
+          "name": "guard-rail",
+          "count": 181
+        },
+        {
+          "name": "lamp-poles",
+          "count": 9
+        },
+        {
+          "name": "lamp-arms",
+          "count": 9
+        },
+        {
+          "name": "lamp-heads",
+          "count": 9
+        },
+        {
+          "name": "sign-posts",
+          "count": 6
+        },
+        {
+          "name": "road-sign-0",
+          "count": 3
+        },
+        {
+          "name": "road-sign-1",
+          "count": 3
+        },
+        {
+          "name": "seagulls",
+          "count": 20
+        },
+        {
+          "name": "city-buildings",
+          "count": 60
+        },
+        {
+          "name": "ferris-spokes",
+          "count": 12
+        },
+        {
+          "name": "ferris-gondolas",
+          "count": 12
+        },
+        {
+          "name": "bridge-piers",
+          "count": 6
+        },
+        {
+          "name": "bridge-cables",
+          "count": 15
+        }
+      ],
+      "calls": 241,
+      "triangles": 333532,
+      "city": false,
+      "landmarks": true
+    },
+    {
+      "offset": 0.25,
+      "error": 0,
+      "distance": 7.500000000000003,
+      "height": 1.9,
+      "fov": 45,
+      "fog": "f7d1ae",
+      "instances": [
+        {
+          "name": "clouds",
+          "count": 9
+        },
+        {
+          "name": "boat-hulls",
+          "count": 4
+        },
+        {
+          "name": "boat-sails",
+          "count": 4
+        },
+        {
+          "name": "boat-masts",
+          "count": 4
+        },
+        {
+          "name": "palm-trunks",
+          "count": 200
+        },
+        {
+          "name": "palm-fronds",
+          "count": 200
+        },
+        {
+          "name": "shrubs",
+          "count": 131
+        },
+        {
+          "name": "coastal-rocks",
+          "count": 88
+        },
+        {
+          "name": "kerbs",
+          "count": 362
+        },
+        {
+          "name": "guard-posts",
+          "count": 181
+        },
+        {
+          "name": "guard-rail",
+          "count": 181
+        },
+        {
+          "name": "lamp-poles",
+          "count": 9
+        },
+        {
+          "name": "lamp-arms",
+          "count": 9
+        },
+        {
+          "name": "lamp-heads",
+          "count": 9
+        },
+        {
+          "name": "sign-posts",
+          "count": 6
+        },
+        {
+          "name": "road-sign-0",
+          "count": 3
+        },
+        {
+          "name": "road-sign-1",
+          "count": 3
+        },
+        {
+          "name": "seagulls",
+          "count": 20
+        },
+        {
+          "name": "city-buildings",
+          "count": 60
+        },
+        {
+          "name": "ferris-spokes",
+          "count": 12
+        },
+        {
+          "name": "ferris-gondolas",
+          "count": 12
+        },
+        {
+          "name": "bridge-piers",
+          "count": 6
+        },
+        {
+          "name": "bridge-cables",
+          "count": 15
+        }
+      ],
+      "calls": 238,
+      "triangles": 333450,
+      "city": false,
+      "landmarks": true
+    },
+    {
+      "offset": 0.5,
+      "error": 0,
+      "distance": 7.499999999999998,
+      "height": 1.9,
+      "fov": 45,
+      "fog": "f5dfb2",
+      "instances": [
+        {
+          "name": "clouds",
+          "count": 9
+        },
+        {
+          "name": "boat-hulls",
+          "count": 4
+        },
+        {
+          "name": "boat-sails",
+          "count": 4
+        },
+        {
+          "name": "boat-masts",
+          "count": 4
+        },
+        {
+          "name": "palm-trunks",
+          "count": 200
+        },
+        {
+          "name": "palm-fronds",
+          "count": 200
+        },
+        {
+          "name": "shrubs",
+          "count": 131
+        },
+        {
+          "name": "coastal-rocks",
+          "count": 88
+        },
+        {
+          "name": "kerbs",
+          "count": 362
+        },
+        {
+          "name": "guard-posts",
+          "count": 181
+        },
+        {
+          "name": "guard-rail",
+          "count": 181
+        },
+        {
+          "name": "lamp-poles",
+          "count": 9
+        },
+        {
+          "name": "lamp-arms",
+          "count": 9
+        },
+        {
+          "name": "lamp-heads",
+          "count": 9
+        },
+        {
+          "name": "sign-posts",
+          "count": 6
+        },
+        {
+          "name": "road-sign-0",
+          "count": 3
+        },
+        {
+          "name": "road-sign-1",
+          "count": 3
+        },
+        {
+          "name": "seagulls",
+          "count": 20
+        },
+        {
+          "name": "city-buildings",
+          "count": 60
+        },
+        {
+          "name": "ferris-spokes",
+          "count": 12
+        },
+        {
+          "name": "ferris-gondolas",
+          "count": 12
+        },
+        {
+          "name": "bridge-piers",
+          "count": 6
+        },
+        {
+          "name": "bridge-cables",
+          "count": 15
+        }
+      ],
+      "calls": 235,
+      "triangles": 333424,
+      "city": false,
+      "landmarks": true
+    },
+    {
+      "offset": 0.75,
+      "error": 0,
+      "distance": 7.500000000000006,
+      "height": 1.9,
+      "fov": 45,
+      "fog": "f2bd95",
+      "instances": [
+        {
+          "name": "clouds",
+          "count": 9
+        },
+        {
+          "name": "boat-hulls",
+          "count": 4
+        },
+        {
+          "name": "boat-sails",
+          "count": 4
+        },
+        {
+          "name": "boat-masts",
+          "count": 4
+        },
+        {
+          "name": "palm-trunks",
+          "count": 200
+        },
+        {
+          "name": "palm-fronds",
+          "count": 200
+        },
+        {
+          "name": "shrubs",
+          "count": 131
+        },
+        {
+          "name": "coastal-rocks",
+          "count": 88
+        },
+        {
+          "name": "kerbs",
+          "count": 362
+        },
+        {
+          "name": "guard-posts",
+          "count": 181
+        },
+        {
+          "name": "guard-rail",
+          "count": 181
+        },
+        {
+          "name": "lamp-poles",
+          "count": 9
+        },
+        {
+          "name": "lamp-arms",
+          "count": 9
+        },
+        {
+          "name": "lamp-heads",
+          "count": 9
+        },
+        {
+          "name": "sign-posts",
+          "count": 6
+        },
+        {
+          "name": "road-sign-0",
+          "count": 3
+        },
+        {
+          "name": "road-sign-1",
+          "count": 3
+        },
+        {
+          "name": "seagulls",
+          "count": 20
+        },
+        {
+          "name": "city-buildings",
+          "count": 60
+        },
+        {
+          "name": "ferris-spokes",
+          "count": 12
+        },
+        {
+          "name": "ferris-gondolas",
+          "count": 12
+        },
+        {
+          "name": "bridge-piers",
+          "count": 6
+        },
+        {
+          "name": "bridge-cables",
+          "count": 15
+        }
+      ],
+      "calls": 242,
+      "triangles": 335996,
+      "city": true,
+      "landmarks": true
+    },
+    {
+      "offset": 1,
+      "error": 0,
+      "distance": 7.500000000000001,
+      "height": 1.9,
+      "fov": 45,
+      "fog": "ef916f",
+      "instances": [
+        {
+          "name": "clouds",
+          "count": 9
+        },
+        {
+          "name": "boat-hulls",
+          "count": 4
+        },
+        {
+          "name": "boat-sails",
+          "count": 4
+        },
+        {
+          "name": "boat-masts",
+          "count": 4
+        },
+        {
+          "name": "palm-trunks",
+          "count": 200
+        },
+        {
+          "name": "palm-fronds",
+          "count": 200
+        },
+        {
+          "name": "shrubs",
+          "count": 131
+        },
+        {
+          "name": "coastal-rocks",
+          "count": 88
+        },
+        {
+          "name": "kerbs",
+          "count": 362
+        },
+        {
+          "name": "guard-posts",
+          "count": 181
+        },
+        {
+          "name": "guard-rail",
+          "count": 181
+        },
+        {
+          "name": "lamp-poles",
+          "count": 9
+        },
+        {
+          "name": "lamp-arms",
+          "count": 9
+        },
+        {
+          "name": "lamp-heads",
+          "count": 9
+        },
+        {
+          "name": "sign-posts",
+          "count": 6
+        },
+        {
+          "name": "road-sign-0",
+          "count": 3
+        },
+        {
+          "name": "road-sign-1",
+          "count": 3
+        },
+        {
+          "name": "seagulls",
+          "count": 20
+        },
+        {
+          "name": "city-buildings",
+          "count": 60
+        },
+        {
+          "name": "ferris-spokes",
+          "count": 12
+        },
+        {
+          "name": "ferris-gondolas",
+          "count": 12
+        },
+        {
+          "name": "bridge-piers",
+          "count": 6
+        },
+        {
+          "name": "bridge-cables",
+          "count": 15
+        }
+      ],
+      "calls": 242,
+      "triangles": 336052,
+      "city": true,
+      "landmarks": true
+    }
+  ],
+  "mobileInstances": [
+    {
+      "name": "palm-trunks",
+      "count": 98
+    },
+    {
+      "name": "shrubs",
+      "count": 67
+    },
+    {
+      "name": "coastal-rocks",
+      "count": 44
+    },
+    {
+      "name": "city-buildings",
+      "count": 30
+    }
+  ],
+  "devMessages": [],
+  "desktop": {
+    "fps": 60,
+    "drawCalls": 240,
+    "frames": 193,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "initialEncodedBytes": 757743,
+    "initialDecodedBytes": 1798809,
+    "messages": []
+  },
+  "mobile4xCPU": {
+    "fps": 23.8,
+    "drawCalls": 240,
+    "frames": 76,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "initialEncodedBytes": 757743,
+    "initialDecodedBytes": 1798809,
+    "messages": []
+  }
+}

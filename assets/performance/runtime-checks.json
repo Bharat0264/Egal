@@ -1,0 +1,19 @@
+{
+  "memory": [
+    {
+      "geometries": 220,
+      "textures": 39,
+      "programs": 127
+    },
+    {
+      "geometries": 220,
+      "textures": 39,
+      "programs": 130
+    }
+  ],
+  "mutations": 0,
+  "hiddenTabPause": true,
+  "clockPreserved": true,
+  "webglFallbackBooking": true,
+  "messages": []
+}

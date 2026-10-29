@@ -1,0 +1,692 @@
+{
+  "fixture": "hero bytes routed in-browser only; SUV deliberately invalid",
+  "requests": [
+    "car-hatchback.glb",
+    "car-sedan.glb",
+    "car-suv.glb",
+    "car-premium-suv.glb",
+    "car-luxury-suv.glb"
+  ],
+  "status": {
+    "hatchback": "ready",
+    "sedan": "ready",
+    "suv": "failed",
+    "premium-suv": "ready",
+    "luxury-suv": "ready"
+  },
+  "before": [
+    {
+      "type": "hatchback",
+      "modelUrl": "/models/fleet/car-hatchback.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "d8721c9c-f39e-4c29-8155-4d7936dc62c9"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "ffffff",
+          "uuid": "4871130f-4133-4169-867d-24c6cc6fabbb"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "bc4858b9-bb06-45e6-a489-528b74c4ef0e"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "2cfb3131-119c-4a4b-ad45-efac5e5c02a6"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "139e17f2-635f-411c-bb36-3f1fe5d65bd0"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "04cacc8e-d97a-4369-b694-42e5879ffe09"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "390951c9-3cbb-4b8a-8a08-bf1f95c560b6"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "39a315fc-a65e-4b71-84c3-84d411b5f236"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "7d5e4927-2a4b-4d7a-beb6-0494ad376084"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "93b5e4af-2a02-4bf4-af65-5e9212f0dc63"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "4cda8279-3763-4a1d-a4b4-4439d3c57e06"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "c014159b-335f-4d9a-89c8-7edf4f19e8aa"
+        }
+      ]
+    },
+    {
+      "type": "sedan",
+      "modelUrl": "/models/fleet/car-sedan.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "c31203e7-0f32-42a1-a8c4-139dfb55a4f3"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "1e4fb8",
+          "uuid": "1b521d0f-a33d-471d-bfcc-63fa7504720b"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "0d1081b0-3188-49e0-97ec-a537aa0f776c"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "ccb01de1-b8ab-4f61-8ed6-add90730f754"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "c95b6d23-3cf8-4fd2-9ed0-fa490907d68c"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "e5594b13-83e4-4f0f-b72a-5e2a2f78c7d4"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "09168be6-0880-41e9-a72a-c1c9708917e4"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "4143ac6d-19d1-4144-b831-08bcfe35e3ea"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "db65644d-37be-4263-986e-80e5b8a06f1f"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "fa38c966-b7e0-41a3-9830-babfb33eed3f"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "0858e952-1022-46d0-b681-7a73220ce66f"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "71a6925f-1f2b-48dd-8b9b-1e47f447a2d9"
+        }
+      ]
+    },
+    {
+      "type": "suv",
+      "modelUrl": "/models/car.opt.glb",
+      "modelStatus": "hero-fallback",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "dff2e392-d458-4b26-bed1-4ee3f55fd81a"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "111111",
+          "uuid": "ad650218-bd3a-48f2-8098-9f0f9826f1be"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "5bf3b0ce-dc0f-465b-9463-803e590706f5"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "1fd83120-5040-487c-8b3e-536cae80ce17"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "7b9661b5-5a6f-4434-acd6-dcbebd7876dc"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "649d3536-fb8c-467a-bbd1-b48133aab989"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "7f0e452a-25fd-47c2-a961-a6d8a720caa9"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "32441c44-f532-42ce-86b8-89a370026b22"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "5b190ba6-36f0-43cb-8efb-297bf3d53b94"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "9b36e4b0-5c0e-4c26-9d5d-7b2767262311"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "ac3b5156-0b92-4161-9744-04b03d06fb48"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "527ab46a-c206-4a02-abd2-8973924bdc52"
+        }
+      ]
+    },
+    {
+      "type": "premium-suv",
+      "modelUrl": "/models/fleet/car-premium-suv.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "1b5c54e4-d6e9-49ac-baca-641a9d3e5f4f"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "c0161b",
+          "uuid": "afa45a9a-f15d-4608-a581-7b06e6aaf306"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "726e1072-abb0-4017-a7d7-2d6d3d28caad"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "d13109f5-60c0-4256-8d36-aa77c73e29f2"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "6cdd8863-0d19-49d5-8ec0-01ac8916ca5e"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "4c827299-7718-4ce9-a70b-c43848fa5683"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "2b47737d-ad6a-4dcd-847f-3ed667700844"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "e41a05e3-7994-4a69-a846-e4f86ae4da42"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "20b22d5d-b34e-4c25-a056-e1b7a2ab57e8"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "00a0ba20-5b50-47e9-9211-d9c7705db710"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "3dd158da-a646-4d56-a36f-e71b5b23ab98"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "bc33ac1a-14c4-45d0-9242-e8d6058d4d1c"
+        }
+      ]
+    },
+    {
+      "type": "luxury-suv",
+      "modelUrl": "/models/fleet/car-luxury-suv.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "93c7b889-8fd8-4b1a-8db1-ab3ca9ed2b4a"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "8a8d91",
+          "uuid": "5aba14d4-c139-453e-86fb-44c038ca83a0"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "516fc65d-9df5-4cd9-ae0b-9424a1af217c"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "686aa060-0294-4451-adae-7d17f319d6d3"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "ee803ee5-0e7b-4fdb-8373-8e4e86b4b8f0"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "beb02400-777e-40cb-b6ab-45edbe51c2dd"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "f48efc0b-e47a-400e-842e-9566e7a417c4"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "aed7e9c2-9b32-458a-a642-78f6265f9239"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "58c097ce-513a-4523-b6a0-c2c08309a7f4"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "d7825d53-3215-4238-807e-0e59ad48adbb"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "5e0b13bf-3e01-47aa-9191-55dbb9114acf"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "02021b09-9dc3-4b57-b80e-3b5bdaf6c8d3"
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "type": "hatchback",
+      "modelUrl": "/models/fleet/car-hatchback.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "d8721c9c-f39e-4c29-8155-4d7936dc62c9"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "ffffff",
+          "uuid": "4871130f-4133-4169-867d-24c6cc6fabbb"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "bc4858b9-bb06-45e6-a489-528b74c4ef0e"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "2cfb3131-119c-4a4b-ad45-efac5e5c02a6"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "139e17f2-635f-411c-bb36-3f1fe5d65bd0"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "04cacc8e-d97a-4369-b694-42e5879ffe09"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "390951c9-3cbb-4b8a-8a08-bf1f95c560b6"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "39a315fc-a65e-4b71-84c3-84d411b5f236"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "7d5e4927-2a4b-4d7a-beb6-0494ad376084"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "93b5e4af-2a02-4bf4-af65-5e9212f0dc63"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "4cda8279-3763-4a1d-a4b4-4439d3c57e06"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "c014159b-335f-4d9a-89c8-7edf4f19e8aa"
+        }
+      ]
+    },
+    {
+      "type": "sedan",
+      "modelUrl": "/models/fleet/car-sedan.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "c31203e7-0f32-42a1-a8c4-139dfb55a4f3"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "1e4fb8",
+          "uuid": "1b521d0f-a33d-471d-bfcc-63fa7504720b"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "0d1081b0-3188-49e0-97ec-a537aa0f776c"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "ccb01de1-b8ab-4f61-8ed6-add90730f754"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "c95b6d23-3cf8-4fd2-9ed0-fa490907d68c"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "e5594b13-83e4-4f0f-b72a-5e2a2f78c7d4"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "09168be6-0880-41e9-a72a-c1c9708917e4"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "4143ac6d-19d1-4144-b831-08bcfe35e3ea"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "db65644d-37be-4263-986e-80e5b8a06f1f"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "fa38c966-b7e0-41a3-9830-babfb33eed3f"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "0858e952-1022-46d0-b681-7a73220ce66f"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "71a6925f-1f2b-48dd-8b9b-1e47f447a2d9"
+        }
+      ]
+    },
+    {
+      "type": "suv",
+      "modelUrl": "/models/car.opt.glb",
+      "modelStatus": "hero-fallback",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "dff2e392-d458-4b26-bed1-4ee3f55fd81a"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "111111",
+          "uuid": "ad650218-bd3a-48f2-8098-9f0f9826f1be"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "5bf3b0ce-dc0f-465b-9463-803e590706f5"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "1fd83120-5040-487c-8b3e-536cae80ce17"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "7b9661b5-5a6f-4434-acd6-dcbebd7876dc"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "649d3536-fb8c-467a-bbd1-b48133aab989"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "7f0e452a-25fd-47c2-a961-a6d8a720caa9"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "32441c44-f532-42ce-86b8-89a370026b22"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "5b190ba6-36f0-43cb-8efb-297bf3d53b94"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "9b36e4b0-5c0e-4c26-9d5d-7b2767262311"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "ac3b5156-0b92-4161-9744-04b03d06fb48"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "527ab46a-c206-4a02-abd2-8973924bdc52"
+        }
+      ]
+    },
+    {
+      "type": "premium-suv",
+      "modelUrl": "/models/fleet/car-premium-suv.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "1b5c54e4-d6e9-49ac-baca-641a9d3e5f4f"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "8a8d91",
+          "uuid": "afa45a9a-f15d-4608-a581-7b06e6aaf306"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "726e1072-abb0-4017-a7d7-2d6d3d28caad"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "d13109f5-60c0-4256-8d36-aa77c73e29f2"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "6cdd8863-0d19-49d5-8ec0-01ac8916ca5e"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "4c827299-7718-4ce9-a70b-c43848fa5683"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "2b47737d-ad6a-4dcd-847f-3ed667700844"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "e41a05e3-7994-4a69-a846-e4f86ae4da42"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "20b22d5d-b34e-4c25-a056-e1b7a2ab57e8"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "00a0ba20-5b50-47e9-9211-d9c7705db710"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "3dd158da-a646-4d56-a36f-e71b5b23ab98"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "bc33ac1a-14c4-45d0-9242-e8d6058d4d1c"
+        }
+      ]
+    },
+    {
+      "type": "luxury-suv",
+      "modelUrl": "/models/fleet/car-luxury-suv.glb",
+      "modelStatus": "fleet",
+      "materials": [
+        {
+          "name": "Rim",
+          "color": "9ba2aa",
+          "uuid": "93c7b889-8fd8-4b1a-8db1-ab3ca9ed2b4a"
+        },
+        {
+          "name": "BodyPaint",
+          "color": "8a8d91",
+          "uuid": "5aba14d4-c139-453e-86fb-44c038ca83a0"
+        },
+        {
+          "name": "Trim",
+          "color": "1d2127",
+          "uuid": "516fc65d-9df5-4cd9-ae0b-9424a1af217c"
+        },
+        {
+          "name": "Glass",
+          "color": "1d2833",
+          "uuid": "686aa060-0294-4451-adae-7d17f319d6d3"
+        },
+        {
+          "name": "LampHousing",
+          "color": "161b22",
+          "uuid": "ee803ee5-0e7b-4fdb-8373-8e4e86b4b8f0"
+        },
+        {
+          "name": "ExhaustMetal",
+          "color": "818993",
+          "uuid": "beb02400-777e-40cb-b6ab-45edbe51c2dd"
+        },
+        {
+          "name": "Headlight",
+          "color": "ffebc7",
+          "uuid": "f48efc0b-e47a-400e-842e-9566e7a417c4"
+        },
+        {
+          "name": "LampLens_Clear",
+          "color": "f8fcff",
+          "uuid": "aed7e9c2-9b32-458a-a642-78f6265f9239"
+        },
+        {
+          "name": "Taillight",
+          "color": "c40a16",
+          "uuid": "58c097ce-513a-4523-b6a0-c2c08309a7f4"
+        },
+        {
+          "name": "Tire",
+          "color": "15171a",
+          "uuid": "d7825d53-3215-4238-807e-0e59ad48adbb"
+        },
+        {
+          "name": "TailReflector",
+          "color": "6f0d16",
+          "uuid": "5e0b13bf-3e01-47aa-9191-55dbb9114acf"
+        },
+        {
+          "name": "LampLens_Red",
+          "color": "b81d24",
+          "uuid": "02021b09-9dc3-4b57-b80e-3b5bdaf6c8d3"
+        }
+      ]
+    }
+  ],
+  "messages": []
+}

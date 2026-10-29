@@ -1,0 +1,55 @@
+{
+  "result": {
+    "valid": {},
+    "invalids": [
+      {
+        "pickup": "Choose a pick-up date today or later."
+      },
+      {
+        "dropoff": "Drop-off must be after pick-up."
+      },
+      {
+        "dropoff": "Drop-off must be after pick-up."
+      },
+      {
+        "pickup": "Choose a pick-up date today or later.",
+        "dropoff": "Drop-off must be after pick-up."
+      },
+      {
+        "phone": "Enter a 10-digit Indian mobile number starting with 6–9."
+      },
+      {
+        "phone": "Enter a 10-digit Indian mobile number starting with 6–9."
+      },
+      {
+        "form": "Unable to submit this request."
+      },
+      {
+        "carId": "Choose a car type."
+      }
+    ],
+    "estimate": {
+      "days": 3,
+      "rate": 4299,
+      "total": 12897
+    },
+    "submitted": {
+      "channel": "endpoint"
+    }
+  },
+  "posted": {
+    "pickup": "2099-06-01",
+    "dropoff": "2099-06-04",
+    "location": "Test airport",
+    "carId": "premium-suv",
+    "color": "#c0161b",
+    "service": "self-drive",
+    "phone": "9876543210",
+    "estimate": {
+      "days": 3,
+      "rate": 4299,
+      "total": 12897
+    }
+  },
+  "rejected": true
+}

@@ -1,0 +1,402 @@
+{
+  "messages": [],
+  "external": [],
+  "checks": [
+    {
+      "width": 1440,
+      "car": 1,
+      "boxes": {
+        "tags": [
+          {
+            "left": 323.8614807128906,
+            "right": 395.5333557128906,
+            "top": 381.2439270019531,
+            "bottom": 423.2439270019531,
+            "text": "Sedan\n₹2,799/day"
+          },
+          {
+            "left": 482.10394287109375,
+            "right": 553.7758178710938,
+            "top": 381.5304260253906,
+            "bottom": 423.5304260253906,
+            "text": "SUV\n₹3,499/day"
+          },
+          {
+            "left": 652.4810180664062,
+            "right": 725.4966430664062,
+            "top": 383.7655334472656,
+            "bottom": 425.7655334472656,
+            "text": "Premium SUV\n₹4,299/day"
+          },
+          {
+            "left": 838.502685546875,
+            "right": 910.174560546875,
+            "top": 386.18780517578125,
+            "bottom": 428.18780517578125,
+            "text": "Luxury SUV\n₹4,999/day"
+          }
+        ],
+        "ui": [
+          {
+            "left": 86.390625,
+            "right": 726.390625,
+            "top": 152,
+            "bottom": 218.546875,
+            "text": "Choose your ride."
+          },
+          {
+            "left": 1075.203125,
+            "right": 1375.203125,
+            "top": 220,
+            "bottom": 595.875,
+            "text": "Hatchback\n01 / 05\nSeats\n5\nFuel\nPetrol\nPrice\n₹2,199\nper day\nBook this car\n↗"
+          },
+          {
+            "left": 100.796875,
+            "right": 690.796875,
+            "top": 737,
+            "bottom": 785,
+            "text": "‹\nDrag the featured car to explore\n›"
+          },
+          {
+            "left": 1261.625,
+            "right": 1408,
+            "top": 28,
+            "bottom": 86,
+            "text": "Book Now ↗"
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "car": 3,
+      "boxes": {
+        "tags": [
+          {
+            "left": 176.9637451171875,
+            "right": 248.6356201171875,
+            "top": 380.1184997558594,
+            "bottom": 422.1184997558594,
+            "text": "Hatchback\n₹2,199/day"
+          },
+          {
+            "left": 323.8614501953125,
+            "right": 395.5333251953125,
+            "top": 381.243896484375,
+            "bottom": 423.243896484375,
+            "text": "Sedan\n₹2,799/day"
+          },
+          {
+            "left": 652.4810180664062,
+            "right": 725.4966430664062,
+            "top": 383.7655334472656,
+            "bottom": 425.7655334472656,
+            "text": "Premium SUV\n₹4,299/day"
+          },
+          {
+            "left": 838.502685546875,
+            "right": 910.174560546875,
+            "top": 386.18780517578125,
+            "bottom": 428.18780517578125,
+            "text": "Luxury SUV\n₹4,999/day"
+          }
+        ],
+        "ui": [
+          {
+            "left": 86.390625,
+            "right": 726.390625,
+            "top": 152,
+            "bottom": 218.546875,
+            "text": "Choose your ride."
+          },
+          {
+            "left": 1075.203125,
+            "right": 1375.203125,
+            "top": 220,
+            "bottom": 595.875,
+            "text": "SUV\n03 / 05\nSeats\n5\nFuel\nDiesel\nPrice\n₹3,499\nper day\nBook this car\n↗"
+          },
+          {
+            "left": 100.796875,
+            "right": 690.796875,
+            "top": 737,
+            "bottom": 785,
+            "text": "‹\nDrag the featured car to explore\n›"
+          },
+          {
+            "left": 1261.625,
+            "right": 1408,
+            "top": 28,
+            "bottom": 86,
+            "text": "Book Now ↗"
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "car": 5,
+      "boxes": {
+        "tags": [
+          {
+            "left": 176.9637451171875,
+            "right": 248.6356201171875,
+            "top": 380.1184997558594,
+            "bottom": 422.1184997558594,
+            "text": "Hatchback\n₹2,199/day"
+          },
+          {
+            "left": 323.8614501953125,
+            "right": 395.5333251953125,
+            "top": 381.243896484375,
+            "bottom": 423.243896484375,
+            "text": "Sedan\n₹2,799/day"
+          },
+          {
+            "left": 482.10394287109375,
+            "right": 553.7758178710938,
+            "top": 381.5304260253906,
+            "bottom": 423.5304260253906,
+            "text": "SUV\n₹3,499/day"
+          },
+          {
+            "left": 652.4776611328125,
+            "right": 725.4932861328125,
+            "top": 383.7657470703125,
+            "bottom": 425.7657470703125,
+            "text": "Premium SUV\n₹4,299/day"
+          }
+        ],
+        "ui": [
+          {
+            "left": 86.390625,
+            "right": 726.390625,
+            "top": 152,
+            "bottom": 218.546875,
+            "text": "Choose your ride."
+          },
+          {
+            "left": 1075.203125,
+            "right": 1375.203125,
+            "top": 220,
+            "bottom": 618.96875,
+            "text": "Toyota Fortuner\n\nLuxury SUV\n\n05 / 05\nSeats\n7\nFuel\nDiesel\nPrice\n₹4,999\nper day\nBook this car\n↗"
+          },
+          {
+            "left": 100.796875,
+            "right": 690.796875,
+            "top": 737,
+            "bottom": 785,
+            "text": "‹\nDrag the featured car to explore\n›"
+          },
+          {
+            "left": 1261.625,
+            "right": 1408,
+            "top": 28,
+            "bottom": 86,
+            "text": "Book Now ↗"
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "car": 1,
+      "boxes": {
+        "tags": [
+          {
+            "left": 106.380859375,
+            "right": 156.865234375,
+            "top": 255.17568969726562,
+            "bottom": 284.1756896972656,
+            "text": "Sedan\n₹2,799/day"
+          },
+          {
+            "left": 174.40066528320312,
+            "right": 224.88504028320312,
+            "top": 253.831298828125,
+            "bottom": 282.831298828125,
+            "text": "SUV\n₹3,499/day"
+          },
+          {
+            "left": 242.9423828125,
+            "right": 293.4267578125,
+            "top": 253.19866943359375,
+            "bottom": 282.19866943359375,
+            "text": "Premium SUV\n₹4,299/day"
+          },
+          {
+            "left": 311.9997253417969,
+            "right": 362.4841003417969,
+            "top": 252.56198120117188,
+            "bottom": 281.5619812011719,
+            "text": "Luxury SUV\n₹4,999/day"
+          }
+        ],
+        "ui": [
+          {
+            "left": 22,
+            "right": 368,
+            "top": 133.5,
+            "bottom": 169.859375,
+            "text": "Choose your ride."
+          },
+          {
+            "left": 16,
+            "right": 374,
+            "top": 401.984375,
+            "bottom": 714,
+            "text": "Hatchback\n01 / 05\nSeats\n5\nFuel\nPetrol\nPrice\n₹2,199\nper day\nBook this car\n↗"
+          },
+          {
+            "left": 18,
+            "right": 372,
+            "top": 730,
+            "bottom": 774,
+            "text": "‹\nDrag the featured car to explore\n›"
+          },
+          {
+            "left": 265.21875,
+            "right": 372,
+            "top": 20,
+            "bottom": 64,
+            "text": "Book Now ↗"
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "car": 3,
+      "boxes": {
+        "tags": [
+          {
+            "left": 38.875892639160156,
+            "right": 89.36026763916016,
+            "top": 256.1528625488281,
+            "bottom": 285.1528625488281,
+            "text": "Hatchback\n₹2,199/day"
+          },
+          {
+            "left": 106.38076782226562,
+            "right": 156.86514282226562,
+            "top": 255.1756591796875,
+            "bottom": 284.1756591796875,
+            "text": "Sedan\n₹2,799/day"
+          },
+          {
+            "left": 242.9423828125,
+            "right": 293.4267578125,
+            "top": 253.19866943359375,
+            "bottom": 282.19866943359375,
+            "text": "Premium SUV\n₹4,299/day"
+          },
+          {
+            "left": 311.9997253417969,
+            "right": 362.4841003417969,
+            "top": 252.56198120117188,
+            "bottom": 281.5619812011719,
+            "text": "Luxury SUV\n₹4,999/day"
+          }
+        ],
+        "ui": [
+          {
+            "left": 22,
+            "right": 368,
+            "top": 133.5,
+            "bottom": 169.859375,
+            "text": "Choose your ride."
+          },
+          {
+            "left": 16,
+            "right": 374,
+            "top": 401.984375,
+            "bottom": 714,
+            "text": "SUV\n03 / 05\nSeats\n5\nFuel\nDiesel\nPrice\n₹3,499\nper day\nBook this car\n↗"
+          },
+          {
+            "left": 18,
+            "right": 372,
+            "top": 730,
+            "bottom": 774,
+            "text": "‹\nDrag the featured car to explore\n›"
+          },
+          {
+            "left": 265.21875,
+            "right": 372,
+            "top": 20,
+            "bottom": 64,
+            "text": "Book Now ↗"
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "car": 5,
+      "boxes": {
+        "tags": [
+          {
+            "left": 38.875892639160156,
+            "right": 89.36026763916016,
+            "top": 256.1528625488281,
+            "bottom": 285.1528625488281,
+            "text": "Hatchback\n₹2,199/day"
+          },
+          {
+            "left": 106.38076782226562,
+            "right": 156.86514282226562,
+            "top": 255.1756591796875,
+            "bottom": 284.1756591796875,
+            "text": "Sedan\n₹2,799/day"
+          },
+          {
+            "left": 174.40066528320312,
+            "right": 224.88504028320312,
+            "top": 253.831298828125,
+            "bottom": 282.831298828125,
+            "text": "SUV\n₹3,499/day"
+          },
+          {
+            "left": 242.94158935546875,
+            "right": 293.42596435546875,
+            "top": 253.19876098632812,
+            "bottom": 282.1987609863281,
+            "text": "Premium SUV\n₹4,299/day"
+          }
+        ],
+        "ui": [
+          {
+            "left": 22,
+            "right": 368,
+            "top": 133.5,
+            "bottom": 169.859375,
+            "text": "Choose your ride."
+          },
+          {
+            "left": 16,
+            "right": 374,
+            "top": 382.796875,
+            "bottom": 714,
+            "text": "Toyota Fortuner\n\nLuxury SUV\n\n05 / 05\nSeats\n7\nFuel\nDiesel\nPrice\n₹4,999\nper day\nBook this car\n↗"
+          },
+          {
+            "left": 18,
+            "right": 372,
+            "top": 730,
+            "bottom": 774,
+            "text": "‹\nDrag the featured car to explore\n›"
+          },
+          {
+            "left": 265.21875,
+            "right": 372,
+            "top": 20,
+            "bottom": 64,
+            "text": "Book Now ↗"
+          }
+        ]
+      }
+    }
+  ]
+}

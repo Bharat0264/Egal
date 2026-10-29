@@ -1,0 +1,22 @@
+{
+  "messages": [],
+  "external": [],
+  "load": {
+    "encoded": 805605,
+    "decoded": 1948739
+  },
+  "loadMeasurement": "Main-document performance entries. The local 757076-byte TTF fetched by the text worker is additional and may not appear in these entries.",
+  "desktopOffsets": [
+    0,
+    0.25,
+    0.28,
+    0.5,
+    0.75,
+    1
+  ],
+  "mobileWidths": [
+    390,
+    375
+  ],
+  "interactions": true
+}

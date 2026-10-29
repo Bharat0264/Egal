@@ -1,0 +1,18 @@
+{
+  "messages": [],
+  "external": [],
+  "fleet": [
+    1,
+    3,
+    5
+  ],
+  "services": [
+    "none",
+    "outstation"
+  ],
+  "outsideShowcase": [
+    0.75,
+    1
+  ],
+  "mobileWidth": 390
+}

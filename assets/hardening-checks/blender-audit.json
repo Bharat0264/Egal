@@ -1,0 +1,1462 @@
+{
+  "file": "C:\\CAR\\egal\\assets\\car-studio.blend",
+  "blender": "5.2.3 LTS",
+  "engine": "CYCLES",
+  "productionMeshCount": 79,
+  "triangles": 59102,
+  "objects": [
+    {
+      "name": "Body",
+      "triangles": 11962,
+      "materials": [
+        "BodyPaint",
+        "Trim"
+      ],
+      "ground": 0.17000001668930054,
+      "dimensions": [
+        2.091780185699463,
+        4.40000057220459,
+        1.309835433959961
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Cabin_Glass",
+      "triangles": 9520,
+      "materials": [
+        "Glass"
+      ],
+      "ground": 0.988448441028595,
+      "dimensions": [
+        1.9894332885742188,
+        2.5851051807403564,
+        0.4790920615196228
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Wheel_FL",
+      "triangles": 1592,
+      "materials": [
+        "Tire",
+        "Rim"
+      ],
+      "ground": 0.0,
+      "dimensions": [
+        0.29638001322746277,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "parent": "SteerPivot_FL",
+      "modifiers": []
+    },
+    {
+      "name": "Wheel_FR",
+      "triangles": 1592,
+      "materials": [
+        "Tire",
+        "Rim"
+      ],
+      "ground": 0.0,
+      "dimensions": [
+        0.29638001322746277,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "parent": "SteerPivot_FR",
+      "modifiers": []
+    },
+    {
+      "name": "Wheel_RL",
+      "triangles": 1592,
+      "materials": [
+        "Tire",
+        "Rim"
+      ],
+      "ground": 0.0,
+      "dimensions": [
+        0.29638001322746277,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Wheel_RR",
+      "triangles": 1592,
+      "materials": [
+        "Tire",
+        "Rim"
+      ],
+      "ground": 0.0,
+      "dimensions": [
+        0.29638001322746277,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Grille",
+      "triangles": 316,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.30000001192092896,
+      "dimensions": [
+        1.0850666761398315,
+        0.02499985694885254,
+        0.24000000953674316
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Bumper_Front",
+      "triangles": 1236,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.17399999499320984,
+      "dimensions": [
+        1.8799999952316284,
+        0.3783811628818512,
+        0.030000001192092896
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Bumper_Rear",
+      "triangles": 1952,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.1550000011920929,
+      "dimensions": [
+        1.8799999952316284,
+        0.27175748348236084,
+        0.35499998927116394
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Boot_Band",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.8820000290870667,
+      "dimensions": [
+        1.9320000410079956,
+        0.017001867294311523,
+        0.06499999761581421
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillight_L",
+      "triangles": 420,
+      "materials": [
+        "LampLens_Red"
+      ],
+      "ground": 0.8520125150680542,
+      "dimensions": [
+        0.7064000368118286,
+        0.1457226276397705,
+        0.11568748950958252
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillight_R",
+      "triangles": 420,
+      "materials": [
+        "LampLens_Red"
+      ],
+      "ground": 0.8520125150680542,
+      "dimensions": [
+        0.7064000368118286,
+        0.1457226276397705,
+        0.11568748950958252
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlight_L",
+      "triangles": 1448,
+      "materials": [
+        "LampLens_Clear"
+      ],
+      "ground": 0.7124485373497009,
+      "dimensions": [
+        0.5019999742507935,
+        0.25621116161346436,
+        0.11860543489456177
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Mirror_L",
+      "triangles": 188,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.9800000190734863,
+      "dimensions": [
+        0.19000005722045898,
+        0.22999995946884155,
+        0.10000002384185791
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlight_R",
+      "triangles": 1448,
+      "materials": [
+        "LampLens_Clear"
+      ],
+      "ground": 0.7124485373497009,
+      "dimensions": [
+        0.5019999742507935,
+        0.25621116161346436,
+        0.11860543489456177
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Mirror_R",
+      "triangles": 188,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.9800000190734863,
+      "dimensions": [
+        0.19000005722045898,
+        0.22999995946884155,
+        0.10000002384185791
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Roof_Spoiler",
+      "triangles": 1000,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 1.3931348323822021,
+      "dimensions": [
+        1.5499999523162842,
+        0.28991925716400146,
+        0.05786511301994324
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Spoiler_BrakeLight",
+      "triangles": 108,
+      "materials": [
+        "Taillight"
+      ],
+      "ground": 1.4290000200271606,
+      "dimensions": [
+        0.6399999856948853,
+        0.009000003337860107,
+        0.009999990463256836
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Trim",
+      "triangles": 376,
+      "materials": [
+        "Trim",
+        "Rim"
+      ],
+      "ground": 0.1599999964237213,
+      "dimensions": [
+        2.0350000858306885,
+        1.8300000429153442,
+        0.09000000357627869
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Badge",
+      "triangles": 188,
+      "materials": [
+        "Rim"
+      ],
+      "ground": 0.7629556059837341,
+      "dimensions": [
+        0.10500000417232513,
+        0.018000125885009766,
+        0.034999966621398926
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Plate_Recess",
+      "triangles": 188,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.3470684289932251,
+      "dimensions": [
+        0.5900000333786011,
+        0.02500009536743164,
+        0.14499998092651367
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Hatch_Shutline",
+      "triangles": 1176,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.6769999861717224,
+      "dimensions": [
+        1.6131999492645264,
+        0.015140533447265625,
+        0.16600000858306885
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Back_L",
+      "triangles": 324,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.7087500095367432,
+      "dimensions": [
+        0.5128048658370972,
+        0.30672526359558105,
+        0.12527996301651
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Frame_L",
+      "triangles": 684,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.7087500095367432,
+      "dimensions": [
+        0.5128323435783386,
+        0.32059359550476074,
+        0.12527996301651
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_LED_L",
+      "triangles": 396,
+      "materials": [
+        "Headlight"
+      ],
+      "ground": 0.725894033908844,
+      "dimensions": [
+        0.4381651282310486,
+        0.16720521450042725,
+        0.0946434736251831
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Projector_L0",
+      "triangles": 380,
+      "materials": [
+        "Rim"
+      ],
+      "ground": 0.7430000305175781,
+      "dimensions": [
+        0.04799997806549072,
+        0.021999835968017578,
+        0.04799997806549072
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Optic_L0",
+      "triangles": 528,
+      "materials": [
+        "LampLens_Clear"
+      ],
+      "ground": 0.7480000257492065,
+      "dimensions": [
+        0.03799998760223389,
+        0.015999794006347656,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Projector_L1",
+      "triangles": 380,
+      "materials": [
+        "Rim"
+      ],
+      "ground": 0.7450000047683716,
+      "dimensions": [
+        0.04799997806549072,
+        0.021999835968017578,
+        0.04799997806549072
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Optic_L1",
+      "triangles": 528,
+      "materials": [
+        "LampLens_Clear"
+      ],
+      "ground": 0.75,
+      "dimensions": [
+        0.03799998760223389,
+        0.015999794006347656,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Back_R",
+      "triangles": 324,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.7087500095367432,
+      "dimensions": [
+        0.5128048658370972,
+        0.30672526359558105,
+        0.12527996301651
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Frame_R",
+      "triangles": 684,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.7087500095367432,
+      "dimensions": [
+        0.5128323435783386,
+        0.32059359550476074,
+        0.12527996301651
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_LED_R",
+      "triangles": 396,
+      "materials": [
+        "Headlight"
+      ],
+      "ground": 0.725894033908844,
+      "dimensions": [
+        0.4381651282310486,
+        0.16720521450042725,
+        0.0946434736251831
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Projector_R0",
+      "triangles": 380,
+      "materials": [
+        "Rim"
+      ],
+      "ground": 0.7430000305175781,
+      "dimensions": [
+        0.04799997806549072,
+        0.021999835968017578,
+        0.04799997806549072
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Projector_R1",
+      "triangles": 380,
+      "materials": [
+        "Rim"
+      ],
+      "ground": 0.7450000047683716,
+      "dimensions": [
+        0.04799997806549072,
+        0.021999835968017578,
+        0.04799997806549072
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Optic_R0",
+      "triangles": 528,
+      "materials": [
+        "LampLens_Clear"
+      ],
+      "ground": 0.7480000257492065,
+      "dimensions": [
+        0.03799998760223389,
+        0.015999794006347656,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Headlamp_Optic_R1",
+      "triangles": 528,
+      "materials": [
+        "LampLens_Clear"
+      ],
+      "ground": 0.75,
+      "dimensions": [
+        0.03799998760223389,
+        0.015999794006347656,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Intake_Duct",
+      "triangles": 640,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.30000001192092896,
+      "dimensions": [
+        1.0850666761398315,
+        0.11500000953674316,
+        0.24000000953674316
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Grille_Slat_0",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.32899999618530273,
+      "dimensions": [
+        0.9100000262260437,
+        0.02499985694885254,
+        0.01199999451637268
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Grille_Slat_1",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.367000013589859,
+      "dimensions": [
+        0.9100000262260437,
+        0.02499985694885254,
+        0.01199999451637268
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Grille_Slat_2",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.4050000011920929,
+      "dimensions": [
+        0.9100000262260437,
+        0.02499985694885254,
+        0.01199999451637268
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Grille_Slat_3",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.4429999887943268,
+      "dimensions": [
+        0.9100000262260437,
+        0.02499985694885254,
+        0.012000024318695068
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Grille_Slat_4",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.48100000619888306,
+      "dimensions": [
+        0.9100000262260437,
+        0.02499985694885254,
+        0.01199999451637268
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Back_L",
+      "triangles": 252,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.3199999928474426,
+      "dimensions": [
+        0.2746666669845581,
+        0.018000006675720215,
+        0.2253333330154419
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_L",
+      "triangles": 512,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.3199999928474426,
+      "dimensions": [
+        0.2746666669845581,
+        0.11500000953674316,
+        0.2253333330154419
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Vane_L0",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.3555000126361847,
+      "dimensions": [
+        0.1899999976158142,
+        0.03500008583068848,
+        0.00899997353553772
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Vane_L1",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.4074999988079071,
+      "dimensions": [
+        0.1899999976158142,
+        0.03500008583068848,
+        0.009000003337860107
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Vane_L2",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.4595000147819519,
+      "dimensions": [
+        0.1899999976158142,
+        0.03500008583068848,
+        0.00899997353553772
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Back_R",
+      "triangles": 252,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.3199999928474426,
+      "dimensions": [
+        0.2746666669845581,
+        0.018000006675720215,
+        0.2253333330154419
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_R",
+      "triangles": 512,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.3199999928474426,
+      "dimensions": [
+        0.2746666669845581,
+        0.11500000953674316,
+        0.2253333330154419
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Vane_R0",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.3555000126361847,
+      "dimensions": [
+        0.1899999976158142,
+        0.03500008583068848,
+        0.00899997353553772
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Vane_R1",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.4074999988079071,
+      "dimensions": [
+        0.1899999976158142,
+        0.03500008583068848,
+        0.009000003337860107
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Front_Duct_Vane_R2",
+      "triangles": 108,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.4595000147819519,
+      "dimensions": [
+        0.1899999976158142,
+        0.03500008583068848,
+        0.00899997353553772
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Back_L",
+      "triangles": 420,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.8520125150680542,
+      "dimensions": [
+        0.7064000368118286,
+        0.15072250366210938,
+        0.11568748950958252
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Frame_L",
+      "triangles": 848,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.8520125150680542,
+      "dimensions": [
+        0.7064000368118286,
+        0.19187402725219727,
+        0.11568748950958252
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_LED_L",
+      "triangles": 476,
+      "materials": [
+        "Taillight"
+      ],
+      "ground": 0.8662700057029724,
+      "dimensions": [
+        0.6557216048240662,
+        0.13113689422607422,
+        0.0882299542427063
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_L0",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_L1",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_L2",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_L3",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_L4",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Back_R",
+      "triangles": 420,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.8520125150680542,
+      "dimensions": [
+        0.7064000368118286,
+        0.15072250366210938,
+        0.11568748950958252
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Frame_R",
+      "triangles": 848,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.8520125150680542,
+      "dimensions": [
+        0.7064000368118286,
+        0.19187402725219727,
+        0.11568748950958252
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_LED_R",
+      "triangles": 476,
+      "materials": [
+        "Taillight"
+      ],
+      "ground": 0.8662700057029724,
+      "dimensions": [
+        0.6557216048240662,
+        0.13113689422607422,
+        0.0882299542427063
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_R0",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_R1",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_R2",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_R3",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Internal_R4",
+      "triangles": 108,
+      "materials": [
+        "TailReflector"
+      ],
+      "ground": 0.8930000066757202,
+      "dimensions": [
+        0.009999990463256836,
+        0.01399993896484375,
+        0.03799998760223389
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Exhaust_L",
+      "triangles": 544,
+      "materials": [
+        "ExhaustMetal"
+      ],
+      "ground": 0.24300000071525574,
+      "dimensions": [
+        0.3333600163459778,
+        0.2170400619506836,
+        0.09999999403953552
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Exhaust_Cavity_L",
+      "triangles": 268,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.24300000071525574,
+      "dimensions": [
+        0.3333600163459778,
+        0.09792423248291016,
+        0.09999999403953552
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Exhaust_R",
+      "triangles": 544,
+      "materials": [
+        "ExhaustMetal"
+      ],
+      "ground": 0.24300000071525574,
+      "dimensions": [
+        0.3333600163459778,
+        0.2170400619506836,
+        0.09999999403953552
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Exhaust_Cavity_R",
+      "triangles": 268,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.24300000071525574,
+      "dimensions": [
+        0.3333600163459778,
+        0.09792423248291016,
+        0.09999999403953552
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Wrap_L",
+      "triangles": 496,
+      "materials": [
+        "LampLens_Red"
+      ],
+      "ground": 0.887499988079071,
+      "dimensions": [
+        0.7493125200271606,
+        0.309999942779541,
+        0.04500001668930054
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Wrap_Housing_L",
+      "triangles": 496,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.887499988079071,
+      "dimensions": [
+        0.7743126153945923,
+        0.309999942779541,
+        0.04500001668930054
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Wrap_LED_L",
+      "triangles": 396,
+      "materials": [
+        "Taillight"
+      ],
+      "ground": 0.9075000286102295,
+      "dimensions": [
+        0.7480692863464355,
+        0.309999942779541,
+        0.004999995231628418
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Wrap_R",
+      "triangles": 496,
+      "materials": [
+        "LampLens_Red"
+      ],
+      "ground": 0.887499988079071,
+      "dimensions": [
+        0.7493125200271606,
+        0.309999942779541,
+        0.04500001668930054
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Wrap_Housing_R",
+      "triangles": 496,
+      "materials": [
+        "LampHousing"
+      ],
+      "ground": 0.887499988079071,
+      "dimensions": [
+        0.7743126153945923,
+        0.309999942779541,
+        0.04500001668930054
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Taillamp_Wrap_LED_R",
+      "triangles": 396,
+      "materials": [
+        "Taillight"
+      ],
+      "ground": 0.9075000286102295,
+      "dimensions": [
+        0.7480692863464355,
+        0.309999942779541,
+        0.004999995231628418
+      ],
+      "parent": null,
+      "modifiers": []
+    },
+    {
+      "name": "Hood_Shutline",
+      "triangles": 1728,
+      "materials": [
+        "Trim"
+      ],
+      "ground": 0.8418176770210266,
+      "dimensions": [
+        1.5023295879364014,
+        0.9917566180229187,
+        0.17254704236984253
+      ],
+      "parent": null,
+      "modifiers": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "BodyPaint",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.6399999856948853,
+          0.6700000166893005,
+          0.7200000286102295,
+          1.0
+        ],
+        "Metallic": 0.7799999713897705,
+        "Roughness": 0.2199999988079071,
+        "Coat Weight": 1.0,
+        "Coat Roughness": 0.10000000149011612,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "Trim",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.012000000104308128,
+          0.014999999664723873,
+          0.019999999552965164,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.3199999928474426,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.11999999731779099,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "TailReflector",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.1599999964237213,
+          0.004000000189989805,
+          0.00800000037997961,
+          1.0
+        ],
+        "Metallic": 0.6499999761581421,
+        "Roughness": 0.23999999463558197,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.029999999329447746,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "Rim",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.33000001311302185,
+          0.36000001430511475,
+          0.4000000059604645,
+          1.0
+        ],
+        "Metallic": 0.8999999761581421,
+        "Roughness": 0.2199999988079071,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.11999999731779099,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "LampLens_Clear",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.9399999976158142,
+          0.9700000286102295,
+          1.0,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.03500000014901161,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.029999999329447746,
+        "Transmission Weight": 1.0,
+        "IOR": 1.4600000381469727
+      }
+    },
+    {
+      "name": "Taillight",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.550000011920929,
+          0.003000000026077032,
+          0.00800000037997961,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.2199999988079071,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.11999999731779099,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "Headlight",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          1.0,
+          0.8307698965072632,
+          0.5711248517036438,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.18000000715255737,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.11999999731779099,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "ExhaustMetal",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.2199999988079071,
+          0.25,
+          0.28999999165534973,
+          1.0
+        ],
+        "Metallic": 0.949999988079071,
+        "Roughness": 0.2199999988079071,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.029999999329447746,
+        "Transmission Weight": 0.0,
+        "IOR": 1.4600000381469727
+      }
+    },
+    {
+      "name": "Tire",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.007499032188206911,
+          0.008568125776946545,
+          0.01032982300966978,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.8999999761581421,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.11999999731779099,
+        "Transmission Weight": 0.0,
+        "IOR": 1.5
+      }
+    },
+    {
+      "name": "LampLens_Red",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.47999998927116394,
+          0.012000000104308128,
+          0.017999999225139618,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.04500000178813934,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.029999999329447746,
+        "Transmission Weight": 0.800000011920929,
+        "IOR": 1.4600000381469727
+      }
+    },
+    {
+      "name": "LampHousing",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.00800000037997961,
+          0.010999999940395355,
+          0.01600000075995922,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.23999999463558197,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.029999999329447746,
+        "Transmission Weight": 0.0,
+        "IOR": 1.4600000381469727
+      }
+    },
+    {
+      "name": "Glass",
+      "principled": true,
+      "values": {
+        "Base Color": [
+          0.012000000104308128,
+          0.020999999716877937,
+          0.032999999821186066,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.06499999761581421,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.11999999731779099,
+        "Transmission Weight": 0.10000000149011612,
+        "IOR": 1.5
+      }
+    }
+  ],
+  "images": [
+    {
+      "name": "Viewer Node",
+      "size": [
+        256,
+        256
+      ],
+      "packed": false
+    }
+  ],
+  "cameras": [
+    "Studio_Camera",
+    "Hero_Camera",
+    "FRONT_CAMERA",
+    "REAR_CAMERA",
+    "HERO_CAMERA"
+  ],
+  "lights": [
+    {
+      "name": "Studio_Key",
+      "type": "AREA",
+      "energy": 950.0
+    },
+    {
+      "name": "Studio_Rim",
+      "type": "AREA",
+      "energy": 1000.0
+    },
+    {
+      "name": "Studio_Fill",
+      "type": "AREA",
+      "energy": 800.0
+    },
+    {
+      "name": "GoldenSun",
+      "type": "SUN",
+      "energy": 2.200000047683716
+    },
+    {
+      "name": "Side_Reflection_Strip",
+      "type": "AREA",
+      "energy": 600.0
+    }
+  ]
+}

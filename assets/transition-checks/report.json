@@ -1,0 +1,111 @@
+{
+  "messages": [],
+  "samples": [
+    {
+      "width": 1440,
+      "offset": 0.55,
+      "visible": [
+        "services"
+      ]
+    },
+    {
+      "width": 1440,
+      "offset": 0.58,
+      "visible": []
+    },
+    {
+      "width": 1440,
+      "offset": 0.6,
+      "visible": []
+    },
+    {
+      "width": 1440,
+      "offset": 0.62,
+      "visible": [
+        "booking"
+      ]
+    },
+    {
+      "width": 1440,
+      "offset": 0.65,
+      "visible": [
+        "booking"
+      ]
+    },
+    {
+      "width": 1440,
+      "offset": 0.7,
+      "visible": [
+        "booking"
+      ]
+    },
+    {
+      "width": 1440,
+      "offset": 0.95,
+      "visible": [
+        "contact"
+      ]
+    },
+    {
+      "width": 1440,
+      "offset": 1,
+      "visible": [
+        "contact"
+      ]
+    },
+    {
+      "width": 390,
+      "offset": 0.55,
+      "visible": [
+        "services"
+      ]
+    },
+    {
+      "width": 390,
+      "offset": 0.58,
+      "visible": []
+    },
+    {
+      "width": 390,
+      "offset": 0.6,
+      "visible": []
+    },
+    {
+      "width": 390,
+      "offset": 0.62,
+      "visible": [
+        "booking"
+      ]
+    },
+    {
+      "width": 390,
+      "offset": 0.65,
+      "visible": [
+        "booking"
+      ]
+    },
+    {
+      "width": 390,
+      "offset": 0.7,
+      "visible": [
+        "booking"
+      ]
+    },
+    {
+      "width": 390,
+      "offset": 0.95,
+      "visible": [
+        "contact"
+      ]
+    },
+    {
+      "width": 390,
+      "offset": 1,
+      "visible": [
+        "contact"
+      ]
+    }
+  ],
+  "serviceCardCleared": true,
+  "bookingJumpVisible": true
+}

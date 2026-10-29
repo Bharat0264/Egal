@@ -1,0 +1,147 @@
+{
+  "triangles": 24270,
+  "bytes": 1062392,
+  "objects": [
+    "Wheel_FL",
+    "SteerPivot_FL",
+    "Wheel_FR",
+    "SteerPivot_FR",
+    "Wheel_RL",
+    "Wheel_RR",
+    "Body",
+    "Cabin_Glass",
+    "Headlight_L",
+    "Taillight_L",
+    "Mirror_L",
+    "Headlight_R",
+    "Taillight_R",
+    "Mirror_R",
+    "Boot_Band",
+    "Grille",
+    "Bumper_Front",
+    "Bumper_Rear",
+    "Roof_Spoiler",
+    "Spoiler_BrakeLight",
+    "Trim"
+  ],
+  "materials": [
+    "BodyPaint",
+    "Glass",
+    "Tire",
+    "Rim",
+    "Headlight",
+    "Taillight",
+    "Trim"
+  ],
+  "checks": {
+    "Wheel_FL": {
+      "triangles": 1636,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0,
+      "ground_z": 0.0
+    },
+    "Wheel_FR": {
+      "triangles": 1636,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0,
+      "ground_z": 0.0
+    },
+    "Wheel_RL": {
+      "triangles": 1636,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0,
+      "ground_z": 0.0
+    },
+    "Wheel_RR": {
+      "triangles": 1636,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0,
+      "ground_z": 0.0
+    },
+    "Body": {
+      "triangles": 9054,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0,
+      "closed_volume_m3": 5.7091178004325895,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "highest_z": 1.602916955947876
+    },
+    "Cabin_Glass": {
+      "triangles": 944,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Headlight_L": {
+      "triangles": 32,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Taillight_L": {
+      "triangles": 1540,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Mirror_L": {
+      "triangles": 188,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Headlight_R": {
+      "triangles": 32,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Taillight_R": {
+      "triangles": 1540,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Mirror_R": {
+      "triangles": 188,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Boot_Band": {
+      "triangles": 576,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Grille": {
+      "triangles": 156,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Bumper_Front": {
+      "triangles": 188,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Bumper_Rear": {
+      "triangles": 2256,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Roof_Spoiler": {
+      "triangles": 468,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Spoiler_BrakeLight": {
+      "triangles": 188,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    },
+    "Trim": {
+      "triangles": 376,
+      "loose_vertices": 0,
+      "remaining_modifiers": 0
+    }
+  },
+  "material_geometry_change": 0,
+  "hdri": "https://polyhaven.com/a/sunset_jhbcentral",
+  "hdri_licence": "CC0"
+}

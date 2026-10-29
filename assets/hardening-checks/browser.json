@@ -1,0 +1,28 @@
+{
+  "reports": [
+    {
+      "width": 390,
+      "messages": [],
+      "scenes": true,
+      "simple": true,
+      "emailMocked": true
+    },
+    {
+      "width": 768,
+      "messages": [],
+      "scenes": true,
+      "simple": true,
+      "emailMocked": true
+    },
+    {
+      "width": 1440,
+      "messages": [],
+      "scenes": true,
+      "simple": true,
+      "emailMocked": true
+    }
+  ],
+  "serverFailureFallback": true,
+  "noJavaScriptPages": true,
+  "contextLostFallback": true
+}

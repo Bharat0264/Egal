@@ -1,0 +1,72 @@
+{
+  "messages": [],
+  "reports": [
+    {
+      "width": 1440,
+      "whatsapp": "Egal booking request\nPick-up: 2026-10-30\nDrop-off: 2026-11-02\nLocation: Visakhapatnam airport\nCar: Premium SUV\nColour: #c0161b\nService: self-drive\nPhone: +91 9876543210\nEstimated: 3 days x ₹4299 = ₹12897\nFinal price, deposit and taxes confirmed by the team.",
+      "layout": {
+        "card": {
+          "left": 1045.203125,
+          "right": 1375.203125,
+          "top": 260,
+          "bottom": 690.859375
+        },
+        "controls": [
+          {
+            "left": 86.390625,
+            "right": 726.390625,
+            "top": 138.5,
+            "bottom": 205.046875
+          },
+          {
+            "left": 1261.625,
+            "right": 1408,
+            "top": 28,
+            "bottom": 86
+          },
+          {
+            "left": 1295.578125,
+            "right": 1408,
+            "top": 728,
+            "bottom": 772
+          }
+        ]
+      },
+      "reset": true
+    },
+    {
+      "width": 390,
+      "whatsapp": "Egal booking request\nPick-up: 2026-10-30\nDrop-off: 2026-11-02\nLocation: Visakhapatnam airport\nCar: Premium SUV\nColour: #c0161b\nService: self-drive\nPhone: +91 9876543210\nEstimated: 3 days x ₹4299 = ₹12897\nFinal price, deposit and taxes confirmed by the team.",
+      "layout": {
+        "card": {
+          "left": 16,
+          "right": 374,
+          "top": 356.140625,
+          "bottom": 752
+        },
+        "controls": [
+          {
+            "left": 22,
+            "right": 368,
+            "top": 133.5,
+            "bottom": 169.859375
+          },
+          {
+            "left": 265.21875,
+            "right": 372,
+            "top": 20,
+            "bottom": 64
+          },
+          {
+            "left": 272.4375,
+            "right": 372,
+            "top": 780,
+            "bottom": 824
+          }
+        ]
+      },
+      "reset": true
+    }
+  ],
+  "protectedFilesUnchanged": true
+}

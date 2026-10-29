@@ -1,0 +1,10 @@
+Golden-hour studio environment
+
+Joburg Central Sunset, Poly Haven
+Source: https://polyhaven.com/a/sunset_jhbcentral
+Licence: CC0
+Photography: Dimitrios Savva
+Processing: Greg Zaal
+Downloaded: 1K HDR, using the public Poly Haven API.
+The HDRI is for the Blender studio preview and is packed into car.blend.
+The vehicle itself was modelled in-house using bpy. No imported vehicle model.

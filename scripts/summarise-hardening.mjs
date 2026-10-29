@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises'
+import {gzipSync} from 'node:zlib'
+const rows=[]
+for(const file of await fs.readdir('dist/assets')){const bytes=await fs.readFile('dist/assets/'+file);rows.push({file,bytes:bytes.length,gzip:gzipSync(bytes).length})}
+const edges=JSON.parse(await fs.readFile('assets/hardening-checks/edges.json','utf8')),previous=JSON.parse(await fs.readFile('assets/cinematic-checks/production.json','utf8'))
+const initial=await fs.readFile('dist/index.html'),simple=await fs.readFile('dist/simple/index.html')
+const summary={chunks:rows,totalJavaScript:rows.filter(r=>r.file.endsWith('.js')).reduce((a,r)=>({bytes:a.bytes+r.bytes,gzip:a.gzip+r.gzip}),{bytes:0,gzip:0}),initialResources:edges.initialResources.reduce((a,r)=>({bytes:a.bytes+r.decoded,encoded:a.encoded+r.encoded}),{bytes:initial.length,encoded:gzipSync(initial).length}),startedResources:edges.startedResources.reduce((a,r)=>({bytes:a.bytes+r.decoded,encoded:a.encoded+r.encoded}),{bytes:initial.length,encoded:gzipSync(initial).length}),html:{home:initial.length,simple:simple.length},previousInitialResources:previous.map(r=>({width:r.width,bytes:r.initial.bytes})),lighthouse:[]}
+for(const route of['home','simple']){const r=JSON.parse(await fs.readFile(`assets/hardening-checks/lighthouse-${route}.report.json`,'utf8'));summary.lighthouse.push({route,fetchTime:r.fetchTime,userAgent:r.environment.hostUserAgent,scores:Object.fromEntries(Object.entries(r.categories).map(([key,value])=>[key,Math.round(value.score*100)])),metrics:Object.fromEntries(['first-contentful-paint','largest-contentful-paint','total-blocking-time','speed-index','cumulative-layout-shift'].map(key=>[key,r.audits[key].numericValue])),throttling:r.configSettings.throttling})}
+await fs.writeFile('assets/hardening-checks/bundle-sizes.json',JSON.stringify(summary,null,2));console.log(JSON.stringify(summary,null,2))

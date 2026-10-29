@@ -1,0 +1,29 @@
+{
+  "texture": [
+    512,
+    512
+  ],
+  "geometryChanged": false,
+  "wheels": [
+    {
+      "name": "Wheel_FL",
+      "triangles": 1592,
+      "tireFaces": 320
+    },
+    {
+      "name": "Wheel_FR",
+      "triangles": 1592,
+      "tireFaces": 320
+    },
+    {
+      "name": "Wheel_RL",
+      "triangles": 1592,
+      "tireFaces": 320
+    },
+    {
+      "name": "Wheel_RR",
+      "triangles": 1592,
+      "tireFaces": 320
+    }
+  ]
+}

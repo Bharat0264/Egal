@@ -1,0 +1,14 @@
+[
+  {
+    "provider": "umami",
+    "piiDropped": true,
+    "noAudioEngineWithoutFiles": true,
+    "sessionSoundChoice": true
+  },
+  {
+    "provider": "plausible",
+    "piiDropped": true,
+    "noAudioEngineWithoutFiles": true,
+    "sessionSoundChoice": true
+  }
+]

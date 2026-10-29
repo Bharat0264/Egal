@@ -1,0 +1,214 @@
+[
+  {
+    "width": 1440,
+    "cpuThrottle": 1,
+    "initial": {
+      "ready": 253,
+      "lcp": 212,
+      "cls": 0.00833275462962963,
+      "resources": [
+        {
+          "url": "http://localhost:4173/assets/index-DC5vESpk.js",
+          "bytes": 115679
+        },
+        {
+          "url": "http://localhost:4173/assets/rolldown-runtime-XKyaHtl9.js",
+          "bytes": 726
+        },
+        {
+          "url": "http://localhost:4173/assets/three-DA1FVgUF.js",
+          "bytes": 763799
+        },
+        {
+          "url": "http://localhost:4173/assets/index-CXOUr8gk.css",
+          "bytes": 30362
+        },
+        {
+          "url": "http://localhost:4173/assets/vendor-n82z3Njy.js",
+          "bytes": 768607
+        },
+        {
+          "url": "http://localhost:4173/models/car.opt.glb",
+          "bytes": 336028
+        },
+        {
+          "url": "http://localhost:4173/images/egal-logo.png",
+          "bytes": 1764923
+        },
+        {
+          "url": "http://localhost:4173/favicon.svg",
+          "bytes": 178
+        }
+      ],
+      "bytes": 3780302
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "median": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "visible": [
+          "hero"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.28,
+        "median": 16.700000000000728,
+        "p95": 50.100000000000364,
+        "visible": [
+          "fleet"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.5,
+        "median": 16.69999999999709,
+        "p95": 16.80000000000291,
+        "visible": [
+          "services"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.7,
+        "median": 16.69999999999709,
+        "p95": 16.80000000000291,
+        "visible": [
+          "booking"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.95,
+        "median": 16.69999999999709,
+        "p95": 16.900000000001455,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 1,
+        "median": 16.69999999999709,
+        "p95": 16.799999999995634,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      }
+    ],
+    "activeScroll": {
+      "frames": 478,
+      "median": 16.69999999999709,
+      "p95": 16.900000000001455
+    },
+    "messages": []
+  },
+  {
+    "width": 390,
+    "cpuThrottle": 4,
+    "initial": {
+      "ready": 2605.0999999940395,
+      "lcp": 508,
+      "cls": 0,
+      "resources": [
+        {
+          "url": "http://localhost:4173/assets/index-DC5vESpk.js",
+          "bytes": 115679
+        },
+        {
+          "url": "http://localhost:4173/assets/rolldown-runtime-XKyaHtl9.js",
+          "bytes": 726
+        },
+        {
+          "url": "http://localhost:4173/assets/three-DA1FVgUF.js",
+          "bytes": 763799
+        },
+        {
+          "url": "http://localhost:4173/assets/vendor-n82z3Njy.js",
+          "bytes": 768607
+        },
+        {
+          "url": "http://localhost:4173/assets/index-CXOUr8gk.css",
+          "bytes": 30362
+        },
+        {
+          "url": "http://localhost:4173/models/car.opt.glb",
+          "bytes": 336028
+        },
+        {
+          "url": "http://localhost:4173/images/egal-logo.png",
+          "bytes": 1764923
+        },
+        {
+          "url": "http://localhost:4173/favicon.svg",
+          "bytes": 178
+        }
+      ],
+      "bytes": 3780302
+    },
+    "scenes": [
+      {
+        "offset": 0,
+        "median": 16.699999999999818,
+        "p95": 16.800000000000182,
+        "visible": [
+          "hero"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.28,
+        "median": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "visible": [
+          "fleet"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.5,
+        "median": 16.69999999999709,
+        "p95": 16.799999999999272,
+        "visible": [
+          "services"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.7,
+        "median": 33.29999999999927,
+        "p95": 49.80000000000291,
+        "visible": [
+          "booking"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 0.95,
+        "median": 33.30000000000291,
+        "p95": 50.099999999998545,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      },
+      {
+        "offset": 1,
+        "median": 16.700000000004366,
+        "p95": 50,
+        "visible": [
+          "contact"
+        ],
+        "overflow": false
+      }
+    ],
+    "activeScroll": {
+      "frames": 226,
+      "median": 33.30000000000291,
+      "p95": 66.69999999999709
+    },
+    "messages": []
+  }
+]

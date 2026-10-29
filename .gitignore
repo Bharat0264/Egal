@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local prerender build and private environment settings
+.prerender
+.env
+.env.*
+!.env.example
+
+# Local render/profiling output and recoverable authoring backups
+/assets/**/*.png
+/assets/**/*.html
+/assets/**/backup-*/
+/assets/**/*before*.blend
+/assets/**/*.blend1
+/assets/**/*.blend.*-backup
+!/assets/refinement-checks/car-after.png
+!/assets/refinement-checks/tire-normal.png
+!/assets/refinement-checks/scene-*.png

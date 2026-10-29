@@ -1,24 +1,89 @@
 import { useMemo } from 'react'
-import { BufferGeometry, Float32BufferAttribute, CatmullRomCurve3, Vector3 } from 'three'
+import { BufferGeometry, Float32BufferAttribute, CatmullRomCurve3, MathUtils, Vector3 } from 'three'
+import { brand } from '../data/brand'
+import { asphaltTextures } from './world/textures'
+
+// Includes the wheels: the asphalt is exactly 2.5 times the car's full width.
+export const CAR_WIDTH = 2.025
+export const ROAD_WIDTH = CAR_WIDTH * 2.5
 export const roadCurve = new CatmullRomCurve3([
-  new Vector3(0, 0, 0), new Vector3(-8, 0, -24), new Vector3(8, 0, -50),
-  new Vector3(-8, 0, -78), new Vector3(0, 0, -108),
+  new Vector3(0, 0, 60), new Vector3(0, 0, 30), new Vector3(0, 0, 0),
+  new Vector3(-7, 0, -30), new Vector3(7, 0, -62), new Vector3(-7, 0, -95),
+  new Vector3(0, 0, -128), new Vector3(12, 0, -166),
+  new Vector3(12, 0, -230), new Vector3(12, 0, -290),
 ])
-export default function Road() {
-  const geometry = useMemo(() => {
-    const positions = [], indices = []
-    for (let i = 0; i <= 160; i++) {
-      const t = i / 160, point = roadCurve.getPointAt(t), tangent = roadCurve.getTangentAt(t)
-      const side = new Vector3(-tangent.z, 0, tangent.x).normalize().multiplyScalar(3.2)
-      positions.push(point.x + side.x, 0, point.z + side.z, point.x - side.x, 0, point.z - side.z)
-      if (i < 160) { const n = i * 2; indices.push(n, n + 2, n + 1, n + 1, n + 2, n + 3) }
+roadCurve.arcLengthDivisions = 2700
+const lengths = roadCurve.getLengths()
+const roadLength = roadCurve.getLength()
+const journeyStart = lengths[600] / roadLength
+const journeyEnd = lengths[1800] / roadLength
+
+// Scroll still spans 0..1; only its position on the extended road changes.
+export function getJourneyProgress(offset) {
+  return MathUtils.lerp(journeyStart, journeyEnd, MathUtils.clamp(offset, 0, 1))
+}
+
+export function createRibbon(width, ranges, lateralOffset = 0, elevation = 0, curve = roadCurve) {
+  const positions = [], indices = [], uvs = []
+  const curveLength = curve.getLength()
+  const point = new Vector3(), tangent = new Vector3(), normal = new Vector3()
+  for (const { start, end, segments } of ranges) {
+    const firstVertex = positions.length / 3
+    for (let i = 0; i <= segments; i++) {
+      const u = MathUtils.lerp(start, end, i / segments)
+      curve.getPointAt(u, point)
+      curve.getTangentAt(u, tangent)
+      // Planar curve: tangent cross world-up gives the lateral normal.
+      normal.set(-tangent.z, 0, tangent.x).normalize()
+      for (const side of [1, -1]) {
+        const distance = lateralOffset + side * width / 2
+        positions.push(point.x + normal.x * distance, point.y + elevation, point.z + normal.z * distance)
+        uvs.push(distance / 4, u * curveLength / 4)
+      }
+      if (i < segments) {
+        const n = firstVertex + i * 2
+        indices.push(n, n + 2, n + 1, n + 1, n + 2, n + 3)
+      }
     }
-    const mesh = new BufferGeometry()
-    mesh.setAttribute('position', new Float32BufferAttribute(positions, 3)); mesh.setIndex(indices); mesh.computeVertexNormals()
-    return mesh
+  }
+  const geometry = new BufferGeometry()
+  geometry.setAttribute('position', new Float32BufferAttribute(positions, 3))
+  geometry.setAttribute('uv', new Float32BufferAttribute(uvs, 2))
+  geometry.setIndex(indices)
+  geometry.computeVertexNormals()
+  geometry.computeBoundingSphere()
+  return geometry
+}
+
+export default function Road() {
+  const textures = useMemo(asphaltTextures, [])
+  const geometry = useMemo(() => {
+    const continuous = [{ start: 0, end: 1, segments: 300 }]
+    const dashes = []
+    for (let distance = 0; distance < roadLength; distance += 3.2) {
+      dashes.push({ start: distance / roadLength, end: Math.min(distance + 1.4, roadLength) / roadLength, segments: 4 })
+    }
+    const edgeOffset = ROAD_WIDTH / 2 - 0.09
+    return {
+      road: createRibbon(ROAD_WIDTH, continuous),
+      centre: createRibbon(0.055, dashes, 0, 0.02),
+      left: createRibbon(0.045, continuous, edgeOffset, 0.02),
+      right: createRibbon(0.045, continuous, -edgeOffset, 0.02),
+    }
   }, [])
-  return <group><mesh geometry={geometry}><meshStandardMaterial color="#343c50" /></mesh>{Array.from({ length: 65 }, (_, i) => {
-    const t = i / 64, p = roadCurve.getPointAt(t), d = roadCurve.getTangentAt(t)
-    return <mesh key={i} position={[p.x, 0.015, p.z]} rotation={[0, Math.atan2(d.x, d.z), 0]}><boxGeometry args={[0.08, 0.02, 0.7]} /><meshBasicMaterial color="#ffe3a2" /></mesh>
-  })}</group>
+  return (
+    <group name="road">
+      <mesh name="asphalt" geometry={geometry.road} receiveShadow>
+        <meshStandardMaterial {...textures} roughness={0.72} metalness={0.08} />
+      </mesh>
+      <mesh name="centre-line" geometry={geometry.centre}>
+        <meshBasicMaterial color="#F8C66C" />
+      </mesh>
+      {[geometry.left, geometry.right].map((edge, index) => (
+        <mesh name={`edge-line-${index}`} key={index} geometry={edge}>
+          <meshBasicMaterial color={brand.colors.cream} />
+        </mesh>
+      ))}
+    </group>
+  )
 }

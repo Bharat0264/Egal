@@ -1,0 +1,355 @@
+{
+  "messages": [],
+  "samples": [
+    {
+      "offset": 1,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": true,
+          "opacity": 1
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        -4.949612239611137,
+        7.999979815380197,
+        -98.30145793900728
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 0.0003484203630247669,
+      "progress": "scaleX(1)"
+    },
+    {
+      "offset": 0.28,
+      "props": {
+        "fleet-bay": {
+          "visible": true,
+          "opacity": 1
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        15.489949648217886,
+        5.919999962667528,
+        -42.76788666141611
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 59.21249680296396,
+      "progress": "scaleX(0.28)"
+    },
+    {
+      "offset": 0.55,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": true,
+          "opacity": 1
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        0.09392343692786607,
+        4.002043539016166,
+        28.324048615037565
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 126.78930404839168,
+      "progress": "scaleX(0.55)"
+    },
+    {
+      "offset": 0.58,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        6.683040180321644,
+        1.9,
+        -67.53372037697834
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 33.454514622477795,
+      "progress": "scaleX(0.58)"
+    },
+    {
+      "offset": 0.6,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        5.489839297438872,
+        1.9,
+        -69.99815419296178
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 30.778070366932177,
+      "progress": "scaleX(0.6)"
+    },
+    {
+      "offset": 0.62,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": true,
+          "opacity": 0.5
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        3.0587800367113887,
+        2.749999994747282,
+        -73.23720621574783
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 26.831540624757068,
+      "progress": "scaleX(0.62)"
+    },
+    {
+      "offset": 0.7,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": true,
+          "opacity": 1
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        2.6307738101579123,
+        3.5999999998371077,
+        -73.11948304013572
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 26.66406132027147,
+      "progress": "scaleX(0.7)"
+    },
+    {
+      "offset": 0.79,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        -5.251028775710308,
+        1.9,
+        -88.38357115631119
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 11.647838628072694,
+      "progress": "scaleX(0.79)"
+    },
+    {
+      "offset": 0.8,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": false,
+          "opacity": 0
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        -7.706736685335089,
+        1.9,
+        -94.17672715279171
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 7.863061521272325,
+      "progress": "scaleX(0.8)"
+    },
+    {
+      "offset": 0.95,
+      "props": {
+        "fleet-bay": {
+          "visible": false,
+          "opacity": 0
+        },
+        "services-fork": {
+          "visible": false,
+          "opacity": 0
+        },
+        "toll-gate": {
+          "visible": false,
+          "opacity": 0
+        },
+        "egal-destination": {
+          "visible": true,
+          "opacity": 1
+        }
+      },
+      "serviceClearance": 74.01428425554852,
+      "lamps": 3,
+      "camera": [
+        -4.949657255061915,
+        7.999999999096558,
+        -98.30180284864902
+      ],
+      "expectedCamera": [
+        -4.949657254668658,
+        8,
+        -98.30180284910439
+      ],
+      "cameraError": 1.0854594922713498e-9,
+      "progress": "scaleX(0.95)"
+    }
+  ]
+}
